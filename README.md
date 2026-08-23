@@ -1,0 +1,35 @@
+# VertexRent
+
+Static HTML/CSS/JavaScript website designed for Vercel.
+
+## Forms
+
+- `services.html#rental-contact` — dedicated Rental Contact Form
+- `services.html#moving-contact` — dedicated Moving / Household Moving Contact Form
+- Moving form fields: name, email, phone, moving date, pickup/destination address and ZIP, pickup/destination floor, pickup/destination elevator availability, helper count, moving items/details, optional photo uploads, and an additional message.
+- Rental form fields: name, email, phone, selected vehicle, rental start/end, calculated duration, and an additional message.
+- Rental and Moving never share vehicle-preference fields.
+- The website presents one rental vehicle only.
+
+## Vercel + Resend
+
+The service forms submit with `multipart/form-data` to Vercel Functions. Moving photos are optimized in the browser before upload and are sent as email attachments to the admin. Successful requests send one email to the admin and a separate confirmation email to the customer.
+
+Required Vercel environment variables:
+
+- `RESEND_API_KEY`
+- `CONTACT_TO_EMAIL`
+- `EMAIL_FROM`
+
+See `VERCEL_FORMS_SETUP.md` for deployment setup.
+
+## Legal pages
+
+The project now includes:
+
+- `impressum.html`
+- `agb.html`
+- `datenschutz.html`
+- `cookies.html`
+
+These are structured drafts. The Impressum requires the client's actual business/operator details before publication. AGB and Datenschutz also need to be checked against the final business model and live technical services.

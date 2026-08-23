@@ -1,0 +1,1315 @@
+/* =====================================================
+   VERTEXRENT SERVICES PAGE
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #11141b;
+    background: #f5f6f8;
+    line-height: 1.6;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: min(1180px, 92%);
+    margin: auto;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.services-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255,255,255,.96);
+    border-bottom: 1px solid #e5e6ea;
+    backdrop-filter: blur(12px);
+}
+
+.header-inner {
+    width: min(1180px, 92%);
+    min-height: 78px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.logo,
+.footer-logo {
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.logo span,
+.footer-logo span {
+    color: #10218b;
+}
+
+.services-header nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.services-header nav a {
+    font-size: 13px;
+    font-weight: 700;
+    color: #414650;
+    transition: color .25s ease;
+}
+
+.services-header nav a:hover {
+    color: #10218b;
+}
+
+.header-button,
+.hero-button,
+.service-button,
+.transfer-cta a,
+.services-contact a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 14px 22px;
+    background: #10218b;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 800;
+    transition: .25s ease;
+}
+
+.header-button:hover,
+.hero-button:hover,
+.service-button:hover,
+.transfer-cta a:hover,
+.services-contact a:hover {
+    background: #080f5c;
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.services-hero {
+    min-height: 680px;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        url("images/10DF99DD-3986-4216-9DC7-173EFC0CCBE0.png")
+        center / cover no-repeat;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5,8,20,.88),
+            rgba(5,8,20,.48),
+            rgba(5,8,20,.18)
+        );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    width: min(1180px, 92%);
+    margin: auto;
+
+    color: white;
+}
+
+.eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-bottom: 18px;
+
+    color: #bcbeca;
+
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.eyebrow span {
+    width: 32px;
+    height: 2px;
+    background: #cecfd7;
+}
+
+.eyebrow.light {
+    color: #fff;
+}
+
+.eyebrow.light span {
+    background: #fff;
+}
+
+.hero-content h1 {
+    max-width: 700px;
+
+    font-size: clamp(52px, 8vw, 100px);
+    line-height: .95;
+    letter-spacing: -5px;
+    font-weight: 900;
+}
+
+.hero-content h1 em {
+    color: #8d9aff;
+    font-style: normal;
+}
+
+.hero-content > p:not(.eyebrow) {
+    max-width: 570px;
+    margin: 30px 0;
+    font-size: 17px;
+    line-height: 1.8;
+    color: rgba(255,255,255,.82);
+}
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.services-intro-section {
+    padding: 110px 0;
+    background: #fff;
+}
+
+.intro-grid {
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 80px;
+    align-items: end;
+}
+
+.intro-grid h2,
+.service-heading h2 {
+    font-size: clamp(42px, 5vw, 70px);
+    line-height: 1;
+    letter-spacing: -3px;
+    font-weight: 900;
+}
+
+.intro-grid h2 em,
+.service-heading h2 em,
+.transfer-cta h3 em,
+.services-contact h2 em {
+    color: #10218b;
+    font-style: normal;
+}
+
+.intro-text {
+    color: #656a74;
+    font-size: 17px;
+    line-height: 1.9;
+}
+
+
+/* =====================================================
+   SERVICE DETAIL
+===================================================== */
+
+.service-detail {
+    padding: 120px 0;
+}
+
+.moving-section,
+.transfer-section {
+    background: #f5f6f8;
+}
+
+.dark-section {
+    background: #0c101b;
+    color: white;
+}
+
+.service-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 60px;
+    margin-bottom: 65px;
+}
+
+.service-heading > p {
+    max-width: 390px;
+    color: #6c717a;
+    font-size: 16px;
+}
+
+.dark-section .service-heading > p {
+    color: #aeb3c0;
+}
+
+
+/* =====================================================
+   MOVING GALLERY
+===================================================== */
+
+.moving-gallery {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 14px;
+    height: 520px;
+    margin-bottom: 70px;
+}
+
+.gallery-main,
+.gallery-small {
+    overflow: hidden;
+}
+
+.gallery-main img,
+.gallery-small img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-small {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 14px;
+}
+
+.moving-gallery img {
+    transition: transform .5s ease;
+}
+
+.moving-gallery img:hover {
+    transform: scale(1.04);
+}
+
+
+/* =====================================================
+   SERVICE CONTENT
+===================================================== */
+
+.service-content-grid,
+.dark-content-grid,
+.transfer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+}
+
+.large-text {
+    font-size: 24px;
+    line-height: 1.55;
+    color: #242831;
+}
+
+.dark-section .large-text {
+    color: #fff;
+}
+
+.dark-content-grid p:not(.large-text) {
+    margin-top: 25px;
+    color: #aeb3c0;
+}
+
+.service-content-grid h3,
+.dark-content-grid h3,
+.transfer-content h3 {
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+
+/* =====================================================
+   CHECK LIST
+===================================================== */
+
+.check-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 25px;
+}
+
+.check-list li {
+    display: flex;
+    gap: 10px;
+    color: #3b4049;
+    font-size: 14px;
+}
+
+.check-list li span {
+    color: #10218b;
+    font-weight: 900;
+}
+
+.light-list li {
+    color: #dfe2e9;
+}
+
+
+/* =====================================================
+   HIGHLIGHT
+===================================================== */
+
+.highlight-box {
+    margin: 70px 0;
+    padding: 40px;
+
+    display: flex;
+    gap: 25px;
+
+    background: #fff;
+    border-left: 4px solid #10218b;
+}
+
+.highlight-icon {
+    font-size: 32px;
+}
+
+.highlight-box h3 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.highlight-box p {
+    margin-top: 10px;
+    color: #686d76;
+}
+
+
+/* =====================================================
+   REQUIREMENTS
+===================================================== */
+
+.requirements {
+    padding: 55px 0;
+    border-top: 1px solid #dddfe4;
+    border-bottom: 1px solid #dddfe4;
+
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    gap: 80px;
+}
+
+.requirements h3 {
+    font-size: 30px;
+}
+
+.requirements ol {
+    padding-left: 25px;
+    columns: 2;
+}
+
+.requirements li {
+    margin-bottom: 14px;
+    padding-left: 8px;
+    color: #4f545d;
+}
+
+
+/* =====================================================
+   TRUCK OFFER
+===================================================== */
+
+.truck-offer {
+    margin-top: 50px;
+    padding: 35px 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+
+    background: #10218b;
+    color: white;
+}
+
+.truck-offer .eyebrow {
+    color: #fff;
+}
+
+.truck-offer .eyebrow span {
+    background: #fff;
+}
+
+.truck-offer h3 {
+    font-size: 32px;
+}
+
+.truck-offer p {
+    color: rgba(255,255,255,.75);
+}
+
+.truck-offer a {
+    padding: 14px 20px;
+    border: 1px solid rgba(255,255,255,.5);
+    font-size: 13px;
+    font-weight: 800;
+}
+
+
+/* =====================================================
+   TRANSPORT GALLERY
+===================================================== */
+
+.transport-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 75px;
+}
+
+.transport-image {
+    height: 220px;
+    overflow: hidden;
+}
+
+.transport-image.large {
+    grid-column: span 2;
+    grid-row: span 2;
+    height: 452px;
+}
+
+.transport-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .5s ease;
+}
+
+.transport-image:hover img {
+    transform: scale(1.05);
+}
+
+
+/* =====================================================
+   PRICE BANNER
+===================================================== */
+
+.price-banner {
+    margin-top: 65px;
+    padding: 30px;
+
+    display: grid;
+    grid-template-columns: .5fr 1.5fr;
+    gap: 40px;
+    align-items: center;
+
+    border: 1px solid #2a3040;
+    background: #131927;
+}
+
+.price-banner span {
+    display: block;
+    margin-bottom: 5px;
+
+    color: #8e95a6;
+
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.price-banner strong {
+    font-size: 38px;
+}
+
+.price-banner p {
+    margin: 0 !important;
+    color: #aeb3c0 !important;
+}
+
+
+/* =====================================================
+   TRANSPORT REQUEST
+===================================================== */
+
+.transport-request {
+    margin-top: 70px;
+}
+
+.transport-request h3 {
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
+.request-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid #292f3d;
+    border-left: 1px solid #292f3d;
+}
+
+.request-grid div {
+    min-height: 100px;
+    padding: 22px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    border-right: 1px solid #292f3d;
+    border-bottom: 1px solid #292f3d;
+
+    color: #d8dce4;
+}
+
+.request-grid span {
+    color: #8f99ff;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+
+/* =====================================================
+   TRANSFER GALLERY
+===================================================== */
+
+.transfer-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 210px;
+    gap: 12px;
+    margin-bottom: 70px;
+}
+
+.transfer-gallery img {
+    width: 100%;
+    /* height: 100%; */
+    object-fit: cover;
+    transition: transform .45s ease;
+}
+
+.transfer-gallery img:hover {
+    transform: scale(1.03);
+}
+
+
+/* =====================================================
+   TRANSFER CONTENT
+===================================================== */
+
+.transfer-content {
+    margin-bottom: 65px;
+}
+
+.transfer-content p {
+    color: #646a73;
+    margin-bottom: 18px;
+}
+
+
+/* =====================================================
+   FEATURES
+===================================================== */
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid #dddfe4;
+    border-left: 1px solid #dddfe4;
+}
+
+.feature-grid div {
+    min-height: 100px;
+    padding: 22px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    border-right: 1px solid #dddfe4;
+    border-bottom: 1px solid #dddfe4;
+
+    font-weight: 700;
+}
+
+.feature-grid span {
+    color: #10218b;
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   TRANSFER CTA
+===================================================== */
+
+.transfer-cta {
+    margin-top: 65px;
+    padding: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+
+    background: #fff;
+    border: 1px solid #e1e2e6;
+}
+
+.transfer-cta h3 {
+    font-size: 34px;
+    line-height: 1.1;
+}
+
+
+/* =====================================================
+   CONTACT CTA
+===================================================== */
+
+.services-contact {
+    padding: 120px 0;
+    background: #10218b;
+    color: white;
+}
+
+.services-contact h2 {
+    margin-bottom: 25px;
+
+    font-size: clamp(45px, 6vw, 75px);
+    line-height: 1;
+    letter-spacing: -3px;
+}
+
+.services-contact h2 em {
+    color: #aab2ff;
+}
+
+.services-contact > .container > p:not(.eyebrow) {
+    max-width: 600px;
+    margin-bottom: 35px;
+    color: rgba(255,255,255,.78);
+    font-size: 17px;
+}
+
+.services-contact a {
+    background: white;
+    color: #10218b;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    background: #080b13;
+    color: white;
+}
+
+.footer-inner {
+    min-height: 110px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.footer-logo {
+    color: white;
+}
+
+.footer-inner p {
+    color: #777d89;
+    font-size: 13px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #aeb3c0;
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .services-header nav {
+        display: none;
+    }
+
+    .intro-grid,
+    .service-content-grid,
+    .dark-content-grid,
+    .transfer-content {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .service-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .moving-gallery {
+        grid-template-columns: 1fr 1fr;
+        height: auto;
+    }
+
+    .gallery-main {
+        grid-column: span 2;
+        height: 350px;
+    }
+
+    .gallery-small {
+        height: 280px;
+    }
+
+    .transport-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .transport-image.large {
+        grid-column: span 2;
+    }
+
+    .requirements {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .request-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .header-inner {
+        min-height: 68px;
+    }
+
+    .header-button {
+        display: none;
+    }
+
+    .services-hero {
+        min-height: 600px;
+    }
+
+    .hero-content h1 {
+        font-size: 55px;
+        letter-spacing: -3px;
+    }
+
+    .hero-content > p:not(.eyebrow) {
+        font-size: 14px;
+    }
+
+    .services-intro-section,
+    .service-detail,
+    .services-contact {
+        padding: 75px 0;
+    }
+
+    .intro-grid h2,
+    .service-heading h2 {
+        font-size: 43px;
+        letter-spacing: -2px;
+    }
+
+    .moving-gallery {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-main {
+        grid-column: auto;
+        height: 270px;
+    }
+
+    .gallery-small {
+        height: 210px;
+    }
+
+    .check-list {
+        grid-template-columns: 1fr;
+    }
+
+    .highlight-box {
+        padding: 25px;
+        flex-direction: column;
+    }
+
+    .requirements ol {
+        columns: 1;
+    }
+
+    .truck-offer {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px 25px;
+    }
+
+    .transport-gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .transport-image,
+    .transport-image.large {
+        height: 180px;
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    .transport-image.large {
+        grid-column: span 2;
+        height: 260px;
+    }
+
+    .price-banner {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .price-banner strong {
+        font-size: 32px;
+    }
+
+    .request-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .transfer-gallery {
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 160px;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .transfer-cta {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px 25px;
+    }
+
+    .transfer-cta h3 {
+        font-size: 28px;
+    }
+
+    .services-contact h2 {
+        font-size: 48px;
+        letter-spacing: -2px;
+    }
+
+    .footer-inner {
+        padding: 30px 0;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 380px) {
+
+    .hero-content h1 {
+        font-size: 47px;
+    }
+
+    .intro-grid h2,
+    .service-heading h2 {
+        font-size: 37px;
+    }
+
+    .service-detail {
+        padding: 60px 0;
+    }
+
+}
+
+/* ========================================
+   SEPARATE SERVICE REQUEST FLOWS
+======================================== */
+
+.services-hero-actions,
+.services-cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 30px;
+}
+
+.hero-button.secondary {
+    opacity: .9;
+}
+
+.rental-offer-card {
+    margin-top: 45px;
+    padding: 42px;
+    background: #f4f2ee;
+    border: 1px solid rgba(0,0,0,.08);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+}
+
+.rental-offer-card h3 {
+    margin: 10px 0 12px;
+    font-size: clamp(28px, 3vw, 42px);
+}
+
+.rental-offer-card p {
+    max-width: 720px;
+}
+
+.service-contact-block {
+    margin-top: 48px;
+    padding: 44px;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,.1);
+    box-shadow: 0 18px 50px rgba(0,0,0,.06);
+    display: grid;
+    grid-template-columns: minmax(260px, .75fr) minmax(0, 1.25fr);
+    gap: 48px;
+    scroll-margin-top: 110px;
+}
+
+.service-contact-copy h3 {
+    margin: 10px 0 14px;
+    font-size: clamp(28px, 3vw, 42px);
+}
+
+.service-contact-copy p:last-child {
+    max-width: 520px;
+    line-height: 1.7;
+}
+
+.service-contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.service-contact-form .form-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.service-contact-form .form-group {
+    margin: 0;
+}
+
+.service-contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+}
+
+.service-contact-form input,
+.service-contact-form select,
+.service-contact-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid rgba(0,0,0,.14);
+    padding: 14px 15px;
+    font: inherit;
+    background: #fff;
+}
+
+.service-contact-form textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+
+.service-contact-form input:focus,
+.service-contact-form select:focus,
+.service-contact-form textarea:focus {
+    outline: 2px solid rgba(0,0,0,.13);
+    outline-offset: 1px;
+}
+
+.service-form-submit[disabled] {
+    opacity: .65;
+    cursor: wait;
+}
+
+.service-form-status {
+    margin: 0;
+    min-height: 22px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.service-form-status.is-success {
+    color: #1c6b3d;
+}
+
+.service-form-status.is-error {
+    color: #a53030;
+}
+
+@media (max-width: 900px) {
+    .service-contact-block {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding: 30px;
+    }
+}
+
+@media (max-width: 640px) {
+    .service-contact-form .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .service-contact-block,
+    .rental-offer-card {
+        padding: 22px;
+    }
+
+    .services-hero-actions,
+    .services-cta-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+
+/* =====================================================
+   SERVICE REQUEST FORMS
+===================================================== */
+.service-label-strip {
+    background: #111;
+    color: #fff;
+}
+
+.service-label-strip-inner {
+    min-height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(18px, 5vw, 56px);
+    flex-wrap: wrap;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .14em;
+    font-weight: 700;
+}
+
+.service-label-strip-inner span + span::before {
+    content: "•";
+    margin-right: clamp(18px, 5vw, 56px);
+    opacity: .45;
+}
+
+.service-contact-form {
+    gap: 20px;
+}
+
+.form-section-heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 8px;
+    padding-top: 6px;
+    border-top: 1px solid rgba(0,0,0,.08);
+}
+
+.form-section-heading span {
+    display: inline-flex;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0,0,0,.16);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .08em;
+}
+
+.form-section-heading h4 {
+    margin: 0;
+    font-size: 15px;
+    letter-spacing: -.01em;
+}
+
+.form-row-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+}
+
+.form-group-small {
+    max-width: 150px;
+}
+
+.required-mark {
+    color: #a53030;
+}
+
+.field-help,
+.form-note-inline,
+.file-upload-meta {
+    display: block;
+    margin-top: 7px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #666;
+}
+
+.form-submit-row {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.form-submit-row .service-form-status {
+    flex: 1 1 250px;
+}
+
+.photo-upload-group input[type="file"] {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.file-upload-meta {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.file-list {
+    margin: 8px 0 0;
+    font-size: 12px;
+    line-height: 1.6;
+    color: #333;
+    word-break: break-word;
+}
+
+.rental-offer-card {
+    min-height: 210px;
+}
+
+@media (max-width: 900px) {
+    .form-row-3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+
+    .form-group-small {
+        max-width: none;
+    }
+}
+
+@media (max-width: 640px) {
+    .service-label-strip-inner {
+        padding: 14px 20px;
+        gap: 10px;
+    }
+
+    .service-label-strip-inner span + span::before {
+        margin-right: 10px;
+    }
+
+    .form-row-3 {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+
+/* ========================================
+   DEDICATED RENTAL / MOVING PAGES
+======================================== */
+.service-page-hero {
+    padding: 150px 0 90px;
+    background: linear-gradient(135deg, #f4f1eb 0%, #fbfaf7 55%, #ece8df 100%);
+    border-bottom: 1px solid rgba(15, 15, 15, 0.08);
+}
+.service-page-hero .container { max-width: 900px; }
+.service-page-hero h1 { margin: 14px 0 20px; font-size: clamp(48px, 6vw, 78px); line-height: .98; }
+.service-page-hero p:last-child { max-width: 700px; font-size: 18px; line-height: 1.7; color: rgba(15,15,15,.72); }
+.dedicated-form-page { padding-bottom: 28px; }
+.service-form-page { padding: 20px 0 120px; }
+.service-form-page-grid { display:grid; grid-template-columns:minmax(240px,.72fr) minmax(0,1.28fr); gap:70px; align-items:start; }
+.service-form-page .service-contact-copy { position: sticky; top: 110px; }
+.form-page-note { display:flex; flex-direction:column; gap:4px; margin-top:28px; padding:18px 20px; border-left:3px solid #111; background:rgba(255,255,255,.55); }
+.form-page-note span { color:rgba(15,15,15,.62); font-size:14px; }
+.service-choice-section { padding:100px 0 120px; background:#f8f7f3; }
+.service-choice-header { max-width:760px; margin-bottom:48px; }
+.service-choice-header h2 { font-size:clamp(42px,5vw,66px); line-height:1; margin:12px 0 18px; }
+.service-choice-header > p:last-child { max-width:660px; color:rgba(15,15,15,.68); font-size:17px; line-height:1.7; }
+.service-choice-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; }
+.service-choice-card { padding:38px; background:#fff; border:1px solid rgba(15,15,15,.08); min-height:300px; display:flex; flex-direction:column; align-items:flex-start; box-shadow:0 16px 45px rgba(15,15,15,.04); }
+.service-choice-number { font-size:13px; letter-spacing:.14em; opacity:.55; }
+.service-choice-card h3 { font-size:32px; margin:28px 0 12px; }
+.service-choice-card p { color:rgba(15,15,15,.68); line-height:1.7; max-width:520px; margin-bottom:28px; }
+.service-choice-card .btn { margin-top:auto; }
+@media (max-width: 900px) {
+    .service-form-page-grid, .service-choice-grid { grid-template-columns:1fr; gap:32px; }
+    .service-form-page .service-contact-copy { position:static; }
+    .service-page-hero { padding:120px 0 70px; }
+}
+@media (max-width: 560px) {
+    .service-choice-card { padding:28px; }
+    .service-page-hero h1 { font-size:46px; }
+}
+
+.footer-services { margin-top: 20px; padding: 0; border: 0; background: transparent; display: flex; flex-wrap: wrap; gap: 8px 14px; }
+.footer-services span { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: #7a7a7a; }

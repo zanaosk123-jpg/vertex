@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>VertexRent | Umzug &amp; Haushaltsservice</title>
+<meta name="description" content="Professioneller Umzug und Haushaltstransport mit persönlicher Anfrage, Fotos und klarer Preisabstimmung.">
+<meta name="keywords" content="Umzug, Haushaltsumzug, Möbeltransport, Transport, VertexRent">
+<meta name="author" content="VertexRent">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://vertexrent.de/moving.html">
+<link href="images/favicon.png" rel="icon" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="services.css">
+<style>
+:root{--move-dark:#0f1720;--move-soft:#f4f6f5;--move-line:#e1e7e4;--move-accent:#c9a646;--move-text:#172019;--move-muted:#68736d}
+.moving-page{background:#fff;color:var(--move-text)}
+.moving-hero{position:relative;min-height:640px;display:flex;align-items:center;overflow:hidden;background:linear-gradient(90deg,rgba(10,18,20,.90) 0%,rgba(10,18,20,.78) 44%,rgba(10,18,20,.20) 100%),url('images/towing_image_1.jpg') center/cover no-repeat}
+.moving-hero:after{content:"";position:absolute;inset:auto 0 0;height:90px;background:linear-gradient(transparent,rgba(10,18,20,.28));pointer-events:none}
+.moving-hero .container{position:relative;z-index:2}
+.moving-hero-copy{max-width:770px;color:#fff;padding:90px 0 100px}
+.moving-kicker{display:inline-flex;align-items:center;gap:10px;text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:700;color:#f3d878;margin-bottom:18px}
+.moving-kicker:before{content:"";width:34px;height:2px;background:var(--move-accent)}
+.moving-hero h1{font-family:Manrope,sans-serif;font-size:clamp(46px,7vw,84px);line-height:.98;letter-spacing:-.045em;margin:0 0 24px;font-weight:800}
+.moving-hero h1 em{color:#f0cf64;font-style:normal}
+.moving-hero p{max-width:650px;font-size:18px;line-height:1.75;color:rgba(255,255,255,.82);margin:0 0 30px}
+.moving-actions{display:flex;flex-wrap:wrap;gap:12px}
+.moving-actions .btn{min-height:52px;padding:0 22px}
+.moving-hero-note{display:flex;flex-wrap:wrap;gap:20px;margin-top:34px;color:rgba(255,255,255,.75);font-size:13px}
+.moving-hero-note span{display:flex;gap:8px;align-items:center}.moving-hero-note span:before{content:"✓";color:#f0cf64;font-weight:800}
+.moving-section-wrap{padding:90px 0}
+.moving-section-wrap.alt{background:var(--move-soft)}
+.moving-intro{display:grid;grid-template-columns:1fr .95fr;gap:56px;align-items:end;margin-bottom:50px}
+.moving-intro h2{font-family:Manrope,sans-serif;font-size:clamp(38px,5vw,62px);line-height:1.02;letter-spacing:-.04em;margin:0}
+.moving-intro h2 em{font-style:normal;color:#8c6d1d}
+.moving-intro p{color:var(--move-muted);line-height:1.8;margin:0;max-width:560px}
+.moving-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.moving-card{background:#fff;border:1px solid var(--move-line);border-radius:22px;padding:30px;box-shadow:0 16px 40px rgba(15,23,32,.05)}
+.moving-card-num{font-size:13px;font-weight:800;letter-spacing:.1em;color:#9b7a21}.moving-card h3{font-family:Manrope,sans-serif;font-size:23px;margin:12px 0}.moving-card p{color:var(--move-muted);line-height:1.7;margin:0}
+.moving-gallery{display:grid;grid-template-columns:1.25fr .75fr;gap:16px}.moving-gallery-main{min-height:520px;border-radius:26px;overflow:hidden;position:relative;background:#ddd}.moving-gallery-main img,.moving-gallery-grid img{width:100%;height:100%;object-fit:cover;display:block}.moving-gallery-main figcaption{position:absolute;left:0;right:0;bottom:0;padding:22px;background:linear-gradient(transparent,rgba(0,0,0,.78));color:#fff;font-weight:700}.moving-gallery-grid{display:grid;grid-template-rows:1fr 1fr;gap:16px}.moving-gallery-grid figure{margin:0;min-height:252px;border-radius:22px;overflow:hidden;position:relative;background:#ddd}.moving-gallery figure img{transition:transform .5s ease}.moving-gallery figure:hover img{transform:scale(1.03)}
+.moving-feature{display:grid;grid-template-columns:.85fr 1.15fr;gap:34px;align-items:stretch;margin-top:18px}.moving-feature-visual{border-radius:24px;overflow:hidden;min-height:430px;background:#111}.moving-feature-visual img{width:100%;height:100%;object-fit:cover;display:block}.moving-feature-copy{background:#fff;border:1px solid var(--move-line);border-radius:24px;padding:38px}.moving-badge{display:inline-block;padding:8px 12px;border-radius:999px;background:#fff7d6;color:#7b5d0e;font-weight:800;font-size:12px;letter-spacing:.08em;text-transform:uppercase}.moving-feature-copy h3{font-family:Manrope,sans-serif;font-size:clamp(30px,4vw,46px);line-height:1.04;margin:16px 0}.moving-feature-copy p{color:var(--move-muted);line-height:1.75}.moving-specs{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:28px 0}.moving-spec{padding:16px;border-radius:16px;background:var(--move-soft)}.moving-spec strong{display:block;font-family:Manrope,sans-serif;font-size:24px}.moving-spec span{display:block;color:var(--move-muted);font-size:12px;margin-top:5px;line-height:1.4}.moving-points{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:22px}.moving-points div{padding:12px 14px;border:1px solid var(--move-line);border-radius:14px;font-size:14px}.moving-points div:before{content:"✓";color:#8e731f;font-weight:800;margin-right:8px}
+.moving-form-intro{display:grid;grid-template-columns:.8fr 1.2fr;gap:42px;align-items:start}.moving-form-copy{padding:22px 0}.moving-form-copy h2{font-family:Manrope,sans-serif;font-size:clamp(38px,5vw,60px);line-height:1.02;margin:0 0 16px}.moving-form-copy h2 em{font-style:normal;color:#8c6d1d}.moving-form-copy p{color:var(--move-muted);line-height:1.8}.moving-form-points{display:grid;gap:12px;margin-top:28px}.moving-form-points span{font-size:14px}.moving-form-points span:before{content:"✓";color:#8e731f;font-weight:800;margin-right:10px}
+.moving-contact-form{background:#fff;border:1px solid var(--move-line);border-radius:26px;padding:34px;box-shadow:0 18px 48px rgba(15,23,32,.06)}
+.moving-contact-form .form-section-heading{margin-top:0}.moving-contact-form .service-form-submit{width:100%;justify-content:center;min-height:56px}.moving-upload{border:1px dashed #bcc6c0;border-radius:16px;padding:18px;background:#fafcfb}
+@media(max-width:980px){.moving-hero{min-height:580px}.moving-intro,.moving-feature,.moving-form-intro{grid-template-columns:1fr}.moving-cards{grid-template-columns:1fr}.moving-gallery{grid-template-columns:1fr}.moving-gallery-main{min-height:420px}.moving-gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:none}.moving-gallery-grid figure{min-height:240px}.moving-specs{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){.moving-hero{min-height:620px;background-position:63% center}.moving-hero-copy{padding:72px 0 84px}.moving-hero p{font-size:16px}.moving-section-wrap{padding:64px 0}.moving-gallery-main{min-height:300px}.moving-gallery-grid{grid-template-columns:1fr}.moving-gallery-grid figure{min-height:210px}.moving-feature-copy,.moving-contact-form{padding:22px}.moving-specs{grid-template-columns:1fr 1fr}.moving-points{grid-template-columns:1fr}.moving-actions .btn{width:100%}}
+</style>
+</head>
+<body class="moving-page">
+<header class="site-header">
+  <div class="container nav-wrapper">
+    <a href="index.html" class="logo" aria-label="VertexRent Startseite"><span class="logo-mark">V</span><span class="logo-text">VERTEX<span>RENT</span></span></a>
+    <nav id="site-navigation" class="main-nav" aria-label="Hauptnavigation">
+      <a href="index.html">Startseite</a><a href="services.html">Leistungen</a><a href="rental.html">Autovermietung</a><a href="moving.html" aria-current="page">Umzug</a><a href="index.html#fleet">Fahrzeuge</a><a href="index.html#about">Über uns</a><a href="index.html#contact">Kontakt</a>
+    </nav>
+    <a href="moving.html#moving-form" class="nav-cta">Umzug anfragen</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+<section class="moving-hero">
+  <div class="container moving-hero-copy">
+    <span class="moving-kicker">VertexRent · Umzug &amp; Haushalt</span>
+    <h1>Umziehen.<br><em>Einfach organisiert.</em></h1>
+    <p>Vom einzelnen Möbelstück bis zum kompletten Haushaltsumzug: Sie teilen uns Strecke, Etagen, Aufzug, Helfer und Umfang mit – wir prüfen die Anfrage persönlich und melden uns mit einer passenden Lösung.</p>
+    <div class="moving-actions"><a class="btn btn-dark" href="#moving-form">Umzug anfragen <span>→</span></a><a class="btn btn-outline" href="#leistungen">Unsere Leistungen</a></div>
+    <div class="moving-hero-note"><span>Persönliche Rückmeldung</span><span>Fotos direkt mit Anfrage</span><span>Keine Autovermietung im Umzugsformular</span></div>
+  </div>
+</section>
+
+<section class="moving-section-wrap" id="leistungen">
+  <div class="container">
+    <div class="moving-intro"><div><span class="eyebrow"><span></span> Umzugsservice</span><h2>Alles, was Sie für einen <em>sauberen Umzug</em> brauchen.</h2></div><p>Unsere Umzugsanfrage ist bewusst übersichtlich aufgebaut. So erhalten wir die Informationen, die für eine realistische Einschätzung wichtig sind – ohne unnötige Angaben aus der Autovermietung.</p></div>
+    <div class="moving-cards">
+      <article class="moving-card"><span class="moving-card-num">01</span><h3>Haushaltsumzug</h3><p>Möbel, Kartons, Geräte und persönliche Gegenstände sicher von A nach B transportieren.</p></article>
+      <article class="moving-card"><span class="moving-card-num">02</span><h3>Möbel &amp; Einzeltransporte</h3><p>Auch einzelne große oder schwere Gegenstände können separat angefragt werden.</p></article>
+      <article class="moving-card"><span class="moving-card-num">03</span><h3>Transportlösungen</h3><p>Für besondere Lasten prüfen wir die passende Transportlösung anhand Ihrer Angaben und Fotos.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="moving-section-wrap alt">
+  <div class="container">
+    <div class="moving-intro"><div><span class="eyebrow"><span></span> Einblicke</span><h2>Transport, der <em>praktisch</em> bleibt.</h2></div><p>Ein kleiner Eindruck unserer Transport- und Umzugsfahrzeuge. Die Galerie unterstützt Ihre Anfrage und zeigt, welche Art von Einsatz wir abdecken.</p></div>
+    <div class="moving-gallery">
+      <figure class="moving-gallery-main"><img src="images/towing_image_1.jpeg" alt="Transportfahrzeug für Umzug und Haushaltsservice" loading="lazy"><figcaption>Umzug &amp; Haushaltsservice – zuverlässig unterwegs</figcaption></figure>
+      <div class="moving-gallery-grid">
+        <figure><img src="images/towing_img_9.webp" alt="Transportfahrzeug für Möbeltransport" loading="lazy"></figure>
+        <figure><img src="images/towing_car_4.webp" alt="Fahrzeug für Umzugstransport" loading="lazy"></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="moving-section-wrap" id="transport">
+  <div class="container">
+    <div class="moving-feature">
+      <div class="moving-feature-visual"><img src="images/towing_img_12.png" alt="Transportanhänger für Fahrzeuge und schwere Lasten" loading="lazy"></div>
+      <div class="moving-feature-copy">
+        <span class="moving-badge">3.000 kg Klasse</span>
+        <h3>Hulco Fahrzeugtransportanhänger</h3>
+        <p>Zuverlässiger und gut ausgestatteter Anhänger für Kunden, die eine praktische Lösung zum Transport von Fahrzeugen und anderen schweren Lasten benötigen.</p>
+        <div class="moving-specs"><div class="moving-spec"><strong>3.000 kg</strong><span>Zulässiges Gesamtgewicht</span></div><div class="moving-spec"><strong>≈ 2.200 kg</strong><span>Nutzlast</span></div><div class="moving-spec"><strong>2 Achsen</strong><span>Stabile Transportlösung</span></div><div class="moving-spec"><strong>4,20 m</strong><span>Ladefläche</span></div></div>
+        <div class="moving-points"><div>Elektrische Seilwinde</div><div>2 Aluminium-Auffahrrampen</div><div>Geeignet für Fahrzeugtransport</div><div>Auch für schwere Lasten geeignet</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="moving-section-wrap alt" id="moving-form">
+  <div class="container">
+    <div class="moving-form-intro">
+      <div class="moving-form-copy"><span class="eyebrow"><span></span> Umzugsanfrage</span><h2>Erzählen Sie uns von Ihrem <em>Umzug.</em></h2><p>Je genauer Ihre Angaben sind, desto besser können wir die Anfrage einschätzen. Fotos von Möbeln, Räumen oder besonderen Zugängen können Sie direkt mitsenden.</p><div class="moving-form-points"><span>Abhol- und Zieladresse mit PLZ</span><span>Etagen und Aufzugssituation</span><span>Umzugsdatum und Helferbedarf</span><span>Möbel, Kartons und besondere Gegenstände</span></div></div>
+      <form class="service-contact-form moving-contact-form" data-service-form="moving" data-service-name="Umzug / Haushaltsumzug" enctype="multipart/form-data" novalidate>
+        <input type="hidden" name="service" value="Umzug / Haushaltsumzug">
+        <div class="form-section-heading"><span>01</span><h4>Ihre Kontaktdaten</h4></div>
+        <div class="form-row"><div class="form-group"><label for="moving-name">Vor- und Nachname <span class="required-mark">*</span></label><input autocomplete="name" id="moving-name" name="name" placeholder="Ihr vollständiger Name" required type="text"></div><div class="form-group"><label for="moving-email">E-Mail <span class="required-mark">*</span></label><input autocomplete="email" id="moving-email" name="email" placeholder="sie@beispiel.de" required type="email"></div></div>
+        <div class="form-row"><div class="form-group"><label for="moving-phone">Telefon <span class="required-mark">*</span></label><input autocomplete="tel" id="moving-phone" name="phone" placeholder="+49 ..." required type="tel"></div><div class="form-group"><label for="moving-date">Umzugsdatum <span class="required-mark">*</span></label><input id="moving-date" name="movingDate" required type="date"></div></div>
+        <div class="form-section-heading"><span>02</span><h4>Abholung &amp; Ziel</h4></div>
+        <div class="form-row"><div class="form-group"><label for="moving-pickup-address">Abholadresse <span class="required-mark">*</span></label><input autocomplete="street-address" id="moving-pickup-address" name="pickupAddress" placeholder="Straße und Hausnummer" required type="text"></div><div class="form-group form-group-small"><label for="moving-pickup-zip">PLZ <span class="required-mark">*</span></label><input autocomplete="postal-code" id="moving-pickup-zip" inputmode="numeric" maxlength="10" name="pickupZip" placeholder="PLZ" required type="text"></div></div>
+        <div class="form-row"><div class="form-group"><label for="moving-destination-address">Zieladresse <span class="required-mark">*</span></label><input id="moving-destination-address" name="destinationAddress" placeholder="Straße und Hausnummer" required type="text"></div><div class="form-group form-group-small"><label for="moving-destination-zip">PLZ <span class="required-mark">*</span></label><input id="moving-destination-zip" inputmode="numeric" maxlength="10" name="destinationZip" placeholder="PLZ" required type="text"></div></div>
+        <div class="form-row form-row-3"><div class="form-group"><label for="moving-pickup-floor">Etage Abholung <span class="required-mark">*</span></label><input id="moving-pickup-floor" max="99" min="0" name="pickupFloor" placeholder="0 = Erdgeschoss" required type="number"></div><div class="form-group"><label for="moving-destination-floor">Etage Ziel <span class="required-mark">*</span></label><input id="moving-destination-floor" max="99" min="0" name="destinationFloor" placeholder="0 = Erdgeschoss" required type="number"></div><div class="form-group"><label for="moving-helpers">Helfer benötigt <span class="required-mark">*</span></label><select id="moving-helpers" name="helpers" required><option value="">Bitte auswählen</option><option value="0">0 – Nur Transport</option><option value="1">1 Helfer</option><option value="2">2 Helfer</option><option value="3">3 Helfer</option><option value="4">4 Helfer</option><option value="5">5 Helfer</option></select></div></div>
+        <div class="form-row"><div class="form-group"><label for="moving-pickup-elevator">Aufzug Abholung <span class="required-mark">*</span></label><select id="moving-pickup-elevator" name="pickupElevator" required><option value="">Bitte auswählen</option><option value="Ja">Ja</option><option value="Nein">Nein</option><option value="Unbekannt">Nicht sicher</option></select></div><div class="form-group"><label for="moving-destination-elevator">Aufzug Ziel <span class="required-mark">*</span></label><select id="moving-destination-elevator" name="destinationElevator" required><option value="">Bitte auswählen</option><option value="Ja">Ja</option><option value="Nein">Nein</option><option value="Unbekannt">Nicht sicher</option></select></div></div>
+        <div class="form-section-heading"><span>03</span><h4>Umzugsgut &amp; Fotos</h4></div>
+        <div class="form-group"><label for="moving-items">Was soll transportiert werden? <span class="required-mark">*</span></label><textarea id="moving-items" name="movingItems" placeholder="Möbel, Elektrogeräte, Kartons, Montage, Demontage, besondere Gegenstände, ungefähre Mengen usw." required rows="6"></textarea></div>
+        <div class="form-group photo-upload-group moving-upload"><label for="moving-photos">Fotos vom Umzugsgut</label><input accept="image/jpeg,image/png,image/webp" id="moving-photos" multiple name="photos" type="file"><div class="file-upload-meta"><span>Bis zu 5 Fotos.</span><span>Die Bilder werden vor dem Versand optimiert.</span></div><p aria-live="polite" class="file-list" id="moving-photo-list"></p></div>
+        <div class="form-section-heading"><span>04</span><h4>Weitere Nachricht</h4></div>
+        <div class="form-group"><label for="moving-message">Zusätzliche Nachricht</label><textarea id="moving-message" name="message" placeholder="Gibt es etwas, das wir noch wissen sollten?" rows="4"></textarea></div>
+        <div class="form-submit-row"><button class="btn btn-dark service-form-submit" type="submit">Umzugsanfrage senden <span>→</span></button><p aria-live="polite" class="service-form-status" role="status"></p></div>
+        <p class="form-note-inline">Ihre Anfrage wird von VertexRent geprüft. Eine verbindliche Preisbestätigung erfolgt anschließend persönlich.</p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="container"><div class="footer-top">
+    <div class="footer-brand"><a class="logo footer-logo" href="index.html" aria-label="VertexRent Startseite"><span class="logo-mark">V</span><span class="logo-text">VERTEX<span>RENT</span></span></a><p>Zuverlässige Mobilität.<br>Klare Abläufe.<br>Ihr Service aus einer Hand.</p><div class="service-label-strip footer-services" aria-label="Unsere Leistungen"><span>Abschleppdienst</span><span>AutoVermietung</span><span>Umzug</span></div></div>
+    <div class="footer-column"><h4>Navigation</h4><a href="index.html">Startseite</a><a href="services.html">Leistungen</a><a href="rental.html">Autovermietung</a><a href="moving.html">Umzug</a><a href="index.html#about">Über uns</a><a href="index.html#contact">Kontakt</a></div>
+    <div class="footer-column"><h4>Leistungen</h4><a href="rental.html">Autovermietung</a><a href="services.html#transport">Abschleppdienst / Fahrzeugtransport</a><a href="moving.html">Umzug &amp; Haushaltsservice</a></div>
+    <div class="footer-column"><h4>Kontakt</h4><a href="mailto:info@vertexrent.de">info@vertexrent.de</a><span class="footer-muted">Deutschland</span></div>
+  </div><div class="footer-bottom"><p>© 2026 Alle Rechte vorbehalten.</p><nav aria-label="Rechtliche Hinweise" class="legal-links"><a href="impressum.html">Impressum</a><a href="agb.html">AGB</a><a href="datenschutz.html">Datenschutz</a><a href="privacy-policy.html">Datenschutzrichtlinie</a><a href="cookies.html">Cookies</a></nav></div></div>
+</footer>
+<div class="cookie-notice" id="cookieNotice" role="region" aria-label="Cookie-Hinweis" hidden><div class="cookie-notice-inner"><div><p class="cookie-notice-title">Datenschutz &amp; Cookies</p><p class="cookie-notice-text">Diese Website verwendet derzeit nur technisch notwendige Speicherung für grundlegende Funktionen und Ihre Cookie-Einstellungen. <a href="privacy-policy.html">Mehr erfahren</a></p></div><div class="cookie-notice-actions"><button type="button" class="cookie-button" id="cookieNecessary">Weiter</button><a href="cookies.html" class="cookie-link">Cookie-Einstellungen</a></div></div></div>
+<script src="script.js"></script>
+</body>
+</html>
