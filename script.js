@@ -316,10 +316,21 @@ if (rentalFrom && rentalTo) {
 }
 
 //cretea event for change in rental duration when rentalFrom or rentalTo changes
-document.querySelector("#rental-date-to").addEventListener("change", function () {
-    debugger;
-    updateRentalDuration();
-});
+// document.querySelector("#rental-date-to").addEventListener("change", function () {
+//     debugger;
+//     updateRentalDuration();
+// });
+
+
+
+
+const rentalDateTo = document.querySelector("#rental-date-to");
+
+if (rentalDateTo) {
+    rentalDateTo.addEventListener("change", function () {
+        updateRentalDuration();
+    });
+}
 
 const movingDate = document.getElementById("moving-date");
 if (movingDate) movingDate.min = minToday;
@@ -346,13 +357,161 @@ serviceForms.forEach((form) => {
     });
 });
 
+// const contactForm = document.getElementById("contactForm");
+// if (contactForm) {
+//     contactForm.addEventListener("submit", (event) => {
+//         event.preventDefault();
+//         submitToContactApi(contactForm, "/api/contact");
+//     });
+// }
+
+
+
+
+
+
+
+
+// const contactForm = document.getElementById("contactForm");
+
+// if (contactForm) {
+//     contactForm.addEventListener("submit", async (event) => {
+//         event.preventDefault();
+
+//         const button = contactForm.querySelector("button[type='submit']");
+
+//         if (button) {
+//             button.disabled = true;
+//             button.dataset.originalText = button.innerHTML;
+//             button.innerHTML = "Sending…";
+//         }
+
+//         try {
+//             const formData = new FormData(contactForm);
+
+//             const response = await fetch(
+//                 "https://formspree.io/f/xyegazkw",
+//                 {
+//                     method: "POST",
+//                     body: formData,
+//                     headers: {
+//                         Accept: "application/json"
+//                     }
+//                 }
+//             );
+
+//             const result = await response.json().catch(() => ({}));
+
+//             if (!response.ok) {
+//                 throw new Error(
+//                     result.error ||
+//                     result.message ||
+//                     "The form could not be submitted."
+//                 );
+//             }
+
+//             alert("Thank you. Your request has been sent successfully.");
+
+//             contactForm.reset();
+
+//         } catch (error) {
+
+//             console.error("Formspree error:", error);
+
+//             alert(
+//                 error.message ||
+//                 "Something went wrong. Please try again."
+//             );
+
+//         } finally {
+
+//             if (button) {
+//                 button.disabled = false;
+//                 button.innerHTML =
+//                     button.dataset.originalText ||
+//                     'Send Nachricht <span>→</span>';
+//             }
+
+//         }
+//     });
+// }
+
+
+
+
+
+
 const contactForm = document.getElementById("contactForm");
+
 if (contactForm) {
-    contactForm.addEventListener("submit", (event) => {
+    contactForm.addEventListener("submit", async (event) => {
         event.preventDefault();
-        submitToContactApi(contactForm, "/api/contact");
+
+        const button = contactForm.querySelector("button[type='submit']");
+
+        if (button) {
+            button.disabled = true;
+            button.dataset.originalText = button.innerHTML;
+            button.innerHTML = "Sending…";
+        }
+
+        try {
+            const formData = new FormData(contactForm);
+
+            const response = await fetch(
+                "https://formspree.io/f/xyegazkw",
+                {
+                    method: "POST",
+                    body: formData,
+                    headers: {
+                        Accept: "application/json"
+                    }
+                }
+            );
+
+            const result = await response.json().catch(() => ({}));
+
+            if (!response.ok) {
+                throw new Error(
+                    result.error ||
+                    result.message ||
+                    "Sorry, your request could not be sent. Please try again."
+                );
+            }
+
+            alert(
+                "Thank you! Your request has been sent successfully."
+            );
+
+            contactForm.reset();
+
+        } catch (error) {
+
+            console.error("Formspree error:", error);
+
+            alert(
+                error.message ||
+                "Sorry, your request could not be sent. Please try again."
+            );
+
+        } finally {
+
+            if (button) {
+                button.disabled = false;
+                button.innerHTML =
+                    button.dataset.originalText ||
+                    'Send Nachricht <span>→</span>';
+            }
+
+        }
     });
 }
+
+
+
+
+
+
 
 /* ========================================
    CURRENT YEAR
