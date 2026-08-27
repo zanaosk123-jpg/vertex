@@ -1,6 +1,6 @@
-const publicKey = "2MP3zNzGusKiciao0";
-const serviceId = "service_2a7bujg";
-const templateId = "template_ex5rq37";
+const publicKey = "dqyIjQtZVbtpmWEGX";
+const serviceId = "service_np5vlef";
+const templateId = "template_pviixfg";
 
 // ================================
 // EmailJS
