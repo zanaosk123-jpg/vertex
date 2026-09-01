@@ -48,6 +48,39 @@
 .moving-contact-form .form-section-heading{margin-top:0}.moving-contact-form .service-form-submit{width:100%;justify-content:center;min-height:56px}.moving-upload{border:1px dashed #bcc6c0;border-radius:16px;padding:18px;background:#fafcfb}
 @media(max-width:980px){.moving-hero{min-height:580px}.moving-intro,.moving-feature,.moving-form-intro{grid-template-columns:1fr}.moving-cards{grid-template-columns:1fr}.moving-gallery{grid-template-columns:1fr}.moving-gallery-main{min-height:420px}.moving-gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:none}.moving-gallery-grid figure{min-height:240px}.moving-specs{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:700px){.moving-hero{min-height:620px;background-position:63% center}.moving-hero-copy{padding:72px 0 84px}.moving-hero p{font-size:16px}.moving-section-wrap{padding:64px 0}.moving-gallery-main{min-height:300px}.moving-gallery-grid{grid-template-columns:1fr}.moving-gallery-grid figure{min-height:210px}.moving-feature-copy,.moving-contact-form{padding:22px}.moving-specs{grid-template-columns:1fr 1fr}.moving-points{grid-template-columns:1fr}.moving-actions .btn{width:100%}}
+
+/* ---------- Gallery ---------- */
+.moving-gallery{display:grid;grid-template-columns:1.3fr 1fr;gap:16px}
+.moving-gallery-main{margin:0;min-height:560px;height:100%;border-radius:26px;overflow:hidden;position:relative;background:#dfe4e2}
+.moving-gallery-main img,.moving-gallery-grid img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+.moving-gallery-main figcaption{position:absolute;left:0;right:0;bottom:0;padding:22px;background:linear-gradient(transparent,rgba(0,0,0,.78));color:#fff;font-weight:700}
+.moving-gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:1fr;gap:16px}
+.moving-gallery-grid figure{margin:0;min-height:176px;border-radius:22px;overflow:hidden;position:relative;background:#dfe4e2}
+.moving-gallery figure img{transition:transform .5s ease}
+.moving-gallery figure:hover img{transform:scale(1.04)}
+
+/* ---------- Responsive ---------- */
+@media(max-width:980px){
+  .moving-gallery{grid-template-columns:1fr}
+  .moving-gallery-main{min-height:420px}
+  .moving-gallery-grid{grid-template-columns:repeat(3,1fr)}
+  .moving-gallery-grid figure{min-height:160px}
+}
+@media(max-width:700px){
+  .moving-gallery-main{min-height:300px}
+  .moving-gallery-grid{grid-template-columns:repeat(2,1fr)}
+  .moving-gallery-grid figure{min-height:140px}
+}
+@media(max-width:420px){
+  .moving-gallery-grid{grid-template-columns:1fr 1fr;gap:10px}
+  .moving-gallery-grid figure{min-height:120px;border-radius:16px}
+  .moving-gallery-main{border-radius:18px}
+}
+
+#transport{
+  display: none;
+}
+
 </style>
 </head>
 <body class="moving-page">
@@ -88,14 +121,22 @@
   <div class="container">
     <div class="moving-intro"><div><span class="eyebrow"><span></span> Einblicke</span><h2>Transport, der <em>praktisch</em> bleibt.</h2></div><p>Ein kleiner Eindruck unserer Transport- und Umzugsfahrzeuge. Die Galerie unterstützt Ihre Anfrage und zeigt, welche Art von Einsatz wir abdecken.</p></div>
     <div class="moving-gallery">
-      <figure class="moving-gallery-main"><img src="images/towing_image_1.jpeg" alt="Transportfahrzeug für Umzug und Haushaltsservice" loading="lazy"><figcaption>Umzug &amp; Haushaltsservice – zuverlässig unterwegs</figcaption></figure>
+      <figure class="moving-gallery-main"><img src="images/today_latest_01.png" alt="Transportfahrzeug für Umzug und Haushaltsservice" loading="lazy"><figcaption>Umzug &amp; Haushaltsservice – zuverlässig unterwegs</figcaption></figure>
       <div class="moving-gallery-grid">
-        <figure><img src="images/towing_img_9.webp" alt="Transportfahrzeug für Möbeltransport" loading="lazy"></figure>
-        <figure><img src="images/towing_car_4.webp" alt="Fahrzeug für Umzugstransport" loading="lazy"></figure>
+        <figure><img src="images/today_latest_02.png" alt="Transportfahrzeug für Möbeltransport" loading="lazy"></figure>
+        <figure><img src="images/today_latest_03.png" alt="Fahrzeug für Umzugstransport" loading="lazy"></figure>
+        <figure><img src="images/today_latest_04.png" alt="Umzugstransport mit Transporter" loading="lazy"></figure>
+        <figure><img src="images/today_latest_05.png" alt="Möbeltransport Fahrzeug" loading="lazy"></figure>
+        <figure><img src="images/today_latest_06.png" alt="Transporter beim Umzugseinsatz" loading="lazy"></figure>
+        <figure><img src="images/today_latest_07.png" alt="Fahrzeugtransport Anhänger" loading="lazy"></figure>
+        <figure><img src="images/today_latest_08.png" alt="Umzugsfahrzeug von VertexRent" loading="lazy"></figure>
+        <figure><img src="images/today_latest_09.png" alt="Haushaltsumzug Transport" loading="lazy"></figure>
+        <figure><img src="images/today_latest_10.png" alt="Transportlösung für Umzugsgut" loading="lazy"></figure>
       </div>
     </div>
   </div>
 </section>
+
 
 <section class="moving-section-wrap" id="transport">
   <div class="container">
