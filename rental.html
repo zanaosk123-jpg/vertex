@@ -1,222 +1,1308 @@
 <!DOCTYPE html>
-<html lang="de"><head>
-<!-- 
+<html lang="de">
+
+<head>
+  <!-- 
          BASIC META
      -->
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-<!-- 
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+  <!-- 
          SEO
      -->
-<title>Autovermietung Vertex | Autovermietung &amp; Trailer</title>
-<meta content="Professional vehicle and trailer rental from VertexRent. View the available vehicle, explore the gallery, and request your rental dates online." name="description"/>
-<meta content="car rental, rent a car, vehicle rental, towing cars, moving household, VertexRent" name="keywords"/>
-<meta content="VertexRent" name="author"/>
-<meta content="index, follow" name="robots"/>
-<meta content="index, follow" name="googlebot"/>
-<!-- 
+  <title>Autovermietung Vertex | Autovermietung &amp; Trailer</title>
+  <meta
+    content="Professional vehicle and trailer rental from VertexRent. View the available vehicle, explore the gallery, and request your rental dates online."
+    name="description" />
+  <meta content="car rental, rent a car, vehicle rental, towing cars, moving household, VertexRent" name="keywords" />
+  <meta content="VertexRent" name="author" />
+  <meta content="index, follow" name="robots" />
+  <meta content="index, follow" name="googlebot" />
+  <!-- 
          CANONICAL URL
      -->
-<link href="https://vertexrent.de/rental.html" rel="canonical"/>
-<!-- 
+  <link href="https://vertexrent.de/rental.html" rel="canonical" />
+  <!-- 
          FAVICON
      -->
-<link href="images/favicon.png" rel="icon" type="image/png"/>
-<!-- 
+  <link href="images/favicon.png" rel="icon" type="image/png" />
+  <!-- 
          GOOGLE FONTS
      -->
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
-<!-- 
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap"
+    rel="stylesheet" />
+  <!-- 
          OPEN GRAPH
          Facebook / WhatsApp / LinkedIn
           -->
-<meta content="website" property="og:type"/>
-<meta content="VertexRent | Autovermietung &amp; Mobilitätsservice" property="og:title"/>
-<meta content="Zuverlässige Autovermietung, Transport- und Umzugsleistungen von VertexRent." property="og:description"/>
-<meta content="https://vertexrent.de/" property="og:url"/>
-<meta content="VertexRent" property="og:site_name"/>
-<meta content="https://vertexrent.de/images/og-image.jpg" property="og:image"/>
-<!--  TWITTER / X CARD -->
-<meta content="summary_large_image" name="twitter:card"/>
-<meta content="VertexRent | Autovermietung &amp; Mobilitätsservice" name="twitter:title"/>
-<meta content="Zuverlässige Autovermietung, Transport- und Umzugsleistungen von VertexRent." name="twitter:description"/>
-<meta content="https://vertexrent.de/images/og-image.jpg" name="twitter:image"/>
-<!-- 
+  <meta content="website" property="og:type" />
+  <meta content="VertexRent | Autovermietung &amp; Mobilitätsservice" property="og:title" />
+  <meta content="Zuverlässige Autovermietung, Transport- und Umzugsleistungen von VertexRent."
+    property="og:description" />
+  <meta content="https://vertexrent.de/" property="og:url" />
+  <meta content="VertexRent" property="og:site_name" />
+  <meta content="https://vertexrent.de/images/og-image.jpg" property="og:image" />
+  <!--  TWITTER / X CARD -->
+  <meta content="summary_large_image" name="twitter:card" />
+  <meta content="VertexRent | Autovermietung &amp; Mobilitätsservice" name="twitter:title" />
+  <meta content="Zuverlässige Autovermietung, Transport- und Umzugsleistungen von VertexRent."
+    name="twitter:description" />
+  <meta content="https://vertexrent.de/images/og-image.jpg" name="twitter:image" />
+  <!-- 
          WEBSITE CSS
     -->
-<link href="style.css" rel="stylesheet"/>
-<link href="services.css" rel="stylesheet"/>
-<style>
-.rental-offers-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:34px}
-.rental-offer-card{position:relative;border:1px solid rgba(17,24,39,.08);border-radius:26px;padding:30px;background:#fff;box-shadow:0 16px 45px rgba(17,24,39,.08);overflow:hidden}
-.rental-offer-card-primary{background:linear-gradient(145deg,#fff 0%,#f7f9fc 100%)}
-.trailer-offer-card{background:linear-gradient(145deg,#111827 0%,#1f2937 100%);color:#fff;border-color:rgba(255,255,255,.08);box-shadow:0 18px 50px rgba(17,24,39,.20)}
-.rental-offer-topline{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:18px}
-.rental-offer-tag{display:inline-flex;align-items:center;min-height:32px;padding:7px 12px;border-radius:999px;background:#eef2f7;color:#111827;font-size:.76rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
-.trailer-offer-card .rental-offer-tag{background:rgba(255,255,255,.10);color:#fff}
-.rental-offer-card h3{margin:0 0 12px;font-size:clamp(1.65rem,2.3vw,2.35rem);line-height:1.08;letter-spacing:-.03em}
-.rental-offer-card h3 span{display:block;margin-top:5px;font-size:.62em;font-weight:600;letter-spacing:0;opacity:.8}
-.rental-offer-card p{margin:0;line-height:1.7}
-.trailer-intro{color:rgba(255,255,255,.82);max-width:54ch}
-.trailer-specs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:24px}
-.trailer-specs>div{padding:14px 15px;border-radius:16px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.08)}
-.trailer-specs strong{display:block;font-size:1.08rem;line-height:1.2}
-.trailer-specs span{display:block;margin-top:5px;color:rgba(255,255,255,.62);font-size:.78rem;line-height:1.35}
-.trailer-feature-list{display:grid;gap:10px;margin-top:22px}
-.trailer-feature-list div{display:flex;align-items:flex-start;gap:10px;color:rgba(255,255,255,.88);font-size:.93rem}
-.trailer-feature-list span{color:#fff;font-weight:800}
-.trailer-pricing{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:24px;padding-top:22px;border-top:1px solid rgba(255,255,255,.12)}
-.trailer-pricing small{display:block;margin-bottom:5px;color:rgba(255,255,255,.56);font-size:.73rem;text-transform:uppercase;letter-spacing:.08em}
-.trailer-pricing strong{display:block;font-size:1.1rem;line-height:1.25}
-.trailer-pricing strong span{font-size:.75em;font-weight:500;color:rgba(255,255,255,.58)}
-@media (max-width:900px){.rental-offers-grid{grid-template-columns:1fr}}
-@media (max-width:640px){.rental-offer-card{padding:23px 20px;border-radius:20px}.trailer-specs{grid-template-columns:1fr 1fr}.trailer-pricing{grid-template-columns:1fr}.rental-offer-topline{align-items:flex-start;flex-direction:column;gap:10px}}
-</style>
-<style>
-:root{--ri:#111827;--rm:#667085;--rl:#e7e9ee;--rb:#f5f6f8;--rc:#fff;--rr:26px;--rs:0 20px 60px rgba(17,24,39,.10)}
-.rental-page{background:#fff;color:var(--ri)}
-.rental-hero{position:relative;overflow:hidden;padding:108px 0 82px;background:linear-gradient(135deg,#f8fafc,#e9edf2)}
-.rental-hero:after{content:"";position:absolute;right:-170px;bottom:-250px;width:600px;height:600px;border-radius:50%;background:rgba(255,255,255,.55)}
-.rental-hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1fr) minmax(420px,.9fr);gap:54px;align-items:center}
-.rental-kicker,.rental-card-label{display:inline-flex;align-items:center;gap:9px;padding:8px 12px;border:1px solid rgba(17,24,39,.08);border-radius:999px;background:#fff;font-size:.72rem;font-weight:900;letter-spacing:.11em;text-transform:uppercase}
-.rental-kicker:before{content:"";width:7px;height:7px;border-radius:50%;background:#111827}
-.rental-hero h1{margin:20px 0 18px;font-size:clamp(3rem,5vw,5.7rem);line-height:.96;letter-spacing:-.055em;max-width:10ch}
-.rental-hero h1 em,.rental-section h2 em,.rental-booking-copy h2 em{font-style:normal;color:#667085}
-.rental-hero-lead{max-width:58ch;color:#596273;font-size:1.05rem;line-height:1.8}
-.rental-hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
-.rental-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 20px;border-radius:999px;text-decoration:none;font-weight:800;transition:.2s ease}
-.rental-btn-primary{background:#111827;color:#fff;box-shadow:0 12px 24px rgba(17,24,39,.15)}
-.rental-btn-secondary{background:#fff;color:#111827;border:1px solid rgba(17,24,39,.10)}
-.rental-btn:hover{transform:translateY(-2px)}
-.rental-hero-meta{display:flex;gap:16px;flex-wrap:wrap;margin-top:24px;color:#6b7280;font-size:.85rem}
-.rental-hero-meta span{display:inline-flex;align-items:center;gap:7px}.rental-hero-meta span:before{content:"✓";display:grid;place-items:center;width:20px;height:20px;border-radius:50%;background:#111827;color:#fff;font-size:.68rem;font-weight:900}
-.rental-gallery{background:#fff;border:1px solid rgba(17,24,39,.07);padding:14px;border-radius:30px;box-shadow:var(--rs)}
-.rental-gallery-main{position:relative;aspect-ratio:1.03/1;overflow:hidden;border-radius:22px;background:#e9edf0}.rental-gallery-main img{width:100%;height:100%;display:block;object-fit:cover}.rental-gallery-badge{position:absolute;left:16px;top:16px;padding:8px 11px;border-radius:999px;background:rgba(255,255,255,.95);font-size:.68rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase}.rental-gallery-expand{position:absolute;right:16px;top:16px;width:42px;height:42px;border:0;border-radius:50%;background:rgba(17,24,39,.85);color:#fff;cursor:pointer}
-.rental-gallery-thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:9px}.rental-thumb{padding:0;border:0;border-radius:16px;overflow:hidden;aspect-ratio:1.2/1;background:#eef1f4;cursor:pointer}.rental-thumb img{width:100%;height:100%;display:block;object-fit:cover}.rental-thumb.is-active{outline:3px solid #111827;outline-offset:2px}
-.rental-section{padding:94px 0}.rental-section.alt{background:var(--rb)}.rental-section-head{display:flex;justify-content:space-between;align-items:end;gap:32px;margin-bottom:36px}.rental-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.72rem;font-weight:900;letter-spacing:.11em;text-transform:uppercase;color:#5d6674}.rental-eyebrow:before{content:"";width:24px;height:1px;background:#111827}.rental-section h2{margin:11px 0 0;font-size:clamp(2.1rem,4vw,3.8rem);line-height:1.02;letter-spacing:-.045em}.rental-section-head p{max-width:460px;margin:0;color:#697385;line-height:1.75}
-.rental-offer-grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(330px,.7fr);gap:22px}.rental-card{border:1px solid var(--rl);border-radius:var(--rr);background:#fff;overflow:hidden;box-shadow:0 16px 42px rgba(17,24,39,.06)}.rental-card-main{display:grid;grid-template-columns:minmax(310px,1.05fr) minmax(0,.95fr);min-height:520px}.rental-card-image{background:#e8ecef}.rental-card-image img{width:100%;height:100%;object-fit:cover;display:block}.rental-card-info{padding:36px}.rental-card-info h3{margin:18px 0 10px;font-size:clamp(2rem,3vw,3rem);line-height:1;letter-spacing:-.04em}.rental-card-info p{margin:0;color:#687385;line-height:1.75}.rental-spec-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:11px;margin:26px 0}.rental-spec{padding:15px 16px;background:#fafbfc;border:1px solid var(--rl);border-radius:15px}.rental-spec strong{display:block;font-size:.82rem}.rental-spec span{display:block;margin-top:4px;color:#7d8692;font-size:.76rem}.rental-checks{display:grid;gap:10px;padding:0;margin:0 0 26px;list-style:none}.rental-checks li{display:flex;gap:9px;color:#4b5563;font-size:.91rem}.rental-checks li:before{content:"✓";display:grid;place-items:center;flex:0 0 22px;width:22px;height:22px;border-radius:50%;background:#111827;color:#fff;font-size:.66rem;font-weight:900}
-.trailer-card{padding:32px;background:#111827;color:#fff;display:flex;flex-direction:column;position:relative;overflow:hidden}.trailer-card:after{content:"";position:absolute;right:-90px;top:-90px;width:240px;height:240px;border-radius:50%;background:rgba(255,255,255,.08)}.trailer-card>*{position:relative;z-index:1}.trailer-card .rental-card-label{background:rgba(255,255,255,.1);color:#fff;border-color:rgba(255,255,255,.12)}.trailer-card h3{margin:18px 0 12px;font-size:2rem;letter-spacing:-.04em}.trailer-card p{margin:0;color:rgba(255,255,255,.70);line-height:1.7}.rental-price-panel{margin-top:26px;padding-top:22px;border-top:1px solid rgba(255,255,255,.13)}.rental-price-row{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.08)}.rental-price-row:last-child{border-bottom:0}.rental-price-row span{color:rgba(255,255,255,.6);font-size:.86rem}.rental-price-row strong{font-size:1.22rem}.trailer-card .rental-btn-secondary{margin-top:auto;background:#fff;border-color:#fff}
-.trailer-wrap{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);gap:22px}.trailer-info{padding:38px;background:#111827;color:#fff;border-radius:var(--rr);box-shadow:var(--rs)}.trailer-info h3{margin:15px 0 12px;font-size:clamp(2rem,3vw,3.1rem);letter-spacing:-.045em}.trailer-info p{max-width:56ch;color:rgba(255,255,255,.70);line-height:1.75}.trailer-specs{display:grid;grid-template-columns:repeat(2,1fr);gap:11px;margin-top:26px}.trailer-spec{padding:15px;border:1px solid rgba(255,255,255,.12);border-radius:15px;background:rgba(255,255,255,.05)}.trailer-spec strong{display:block}.trailer-spec span{display:block;margin-top:4px;color:rgba(255,255,255,.56);font-size:.76rem}.trailer-details{padding:32px;border:1px solid var(--rl);border-radius:var(--rr);background:#fff;box-shadow:0 16px 42px rgba(17,24,39,.06)}.trailer-details h4{margin:0 0 18px;font-size:1.35rem}.trailer-details ul{display:grid;gap:12px;padding:0;margin:0;list-style:none}.trailer-details li{display:flex;gap:9px;color:#4b5563}.trailer-details li:before{content:"✓";color:#111827;font-weight:900}.trailer-prices{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:26px}.trailer-price{padding:15px;border-radius:15px;background:#f5f7f9}.trailer-price small{display:block;color:#7a8390;text-transform:uppercase;letter-spacing:.08em;font-size:.64rem;font-weight:800}.trailer-price strong{display:block;margin-top:5px;font-size:1.15rem}
-.rental-booking{padding:98px 0;background:#f5f6f8}.rental-booking-shell{display:grid;grid-template-columns:minmax(280px,.72fr) minmax(0,1.28fr);gap:34px;align-items:start}.rental-booking-copy{position:sticky;top:100px}.rental-booking-copy h2{margin:11px 0 14px;font-size:clamp(2.15rem,4vw,3.7rem);line-height:1;letter-spacing:-.045em}.rental-booking-copy p{color:#687385;line-height:1.75}.rental-note{display:grid;gap:6px;margin-top:20px;padding:16px 17px;background:#fff;border:1px solid var(--rl);border-radius:17px}.rental-note strong{font-size:.9rem}.rental-note span{font-size:.78rem;color:#7b8490;line-height:1.45}.rental-form-card{padding:34px;background:#fff;border:1px solid var(--rl);border-radius:var(--rr);box-shadow:0 16px 42px rgba(17,24,39,.07)}.rental-form-title{margin:0 0 24px;font-size:1.45rem}
-.rental-lightbox{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(7,12,18,.88);z-index:9999;padding:24px}.rental-lightbox.is-open{display:flex}.rental-lightbox-inner{width:100%;max-width:1100px;position:relative}.rental-lightbox img{width:100%;max-height:82vh;object-fit:contain;display:block;border-radius:18px}.rental-lightbox-close{position:absolute;right:-8px;top:-48px;width:38px;height:38px;border:0;border-radius:50%;background:#fff;color:#111;cursor:pointer;font-size:1.2rem}.rental-lightbox-caption{margin-top:10px;text-align:center;color:rgba(255,255,255,.72);font-size:.82rem}
-@media(max-width:980px){.rental-hero-grid,.rental-offer-grid,.trailer-wrap,.rental-booking-shell{grid-template-columns:1fr}.rental-booking-copy{position:static}.rental-card-main{grid-template-columns:1fr}.rental-card-image{min-height:360px}.rental-section-head{align-items:flex-start;flex-direction:column}}
-@media(max-width:680px){.rental-hero{padding:70px 0 50px}.rental-hero-grid{gap:28px}.rental-hero-actions{flex-direction:column}.rental-btn{width:100%}.rental-section,.rental-booking{padding:70px 0}.rental-gallery{padding:9px;border-radius:24px}.rental-gallery-main{border-radius:18px}.rental-gallery-thumbs{grid-template-columns:repeat(2,1fr)}.rental-thumb:last-child{display:none}.rental-card-info,.trailer-card,.trailer-info,.trailer-details,.rental-form-card{padding:24px}.rental-card-image{min-height:280px}.rental-spec-grid,.trailer-specs{grid-template-columns:1fr}.trailer-prices{grid-template-columns:1fr}}
-</style>
-</head><body>
+  <link href="style.css" rel="stylesheet" />
+  <link href="services.css" rel="stylesheet" />
+  <style>
+    .rental-offers-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      margin-top: 34px
+    }
 
-<header class="site-header">
-  <div class="container nav-wrapper">
-    <a href="index.html" class="logo" aria-label="VertexRent Startseite">
-      <span class="logo-mark">V</span>
-      <span class="logo-text">VERTEX<span>RENT</span></span>
-    </a>
-    <nav id="site-navigation" class="main-nav" aria-label="Hauptnavigation">
-      <a href="index.html">Startseite</a>
-      <a href="services.html">Leistungen</a>
-      <a href="rental.html">Autovermietung</a>
-      <a href="moving.html">Umzug</a>
-      <a href="index.html#fleet">Fahrzeuge</a>
-      <a href="index.html#about">Über uns</a>
-      <a href="index.html#contact">Kontakt</a>
-    </nav>
-    <a href="rental.html" class="nav-cta">Fahrzeug anfragen</a>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Navigationsmenü öffnen">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</header>
-<main class="rental-page">
-<section class="rental-hero"><div class="container rental-hero-grid">
-<div class="rental-hero-copy"><span class="rental-kicker">Autovermietung Vertex</span>
-<h1>Rent what you need.<br><em>Drive with confidence.</em></h1>
-<p class="rental-hero-lead">A clear, personal rental service for our available vehicle and the Hulco car transport trailer. View the equipment, compare the pricing, and send your request directly to VertexRent.</p>
-<div class="rental-hero-actions"><a class="rental-btn rental-btn-primary" href="#rental-booking">Verfügbarkeit anfragen <span>→</span></a><a class="rental-btn rental-btn-secondary" href="#available-rentals">Mietfahrzeuge ansehen</a></div>
-<div class="rental-hero-meta"><span>Verfügbarkeit wird persönlich bestätigt</span><span>Keine Zahlung vor Bestätigung</span></div></div>
-<div class="rental-gallery" aria-label="Verfügbares Mietfahrzeug gallery"><div class="rental-gallery-main"><img id="rentalGalleryMain" src="images/BC8DD529-C774-4352-8C28-1C7484FE3177.png" alt="Available VertexRent rental van" loading="eager"><span class="rental-gallery-badge">Verfügbares Mietfahrzeug</span><button class="rental-gallery-expand" type="button" aria-label="Open rental vehicle image">↗</button></div>
-<div class="rental-gallery-thumbs">
-<button class="rental-thumb is-active" type="button" data-gallery-src="images/BC8DD529-C774-4352-8C28-1C7484FE3177.png" data-gallery-alt="Available rental van exterior"><img src="images/BC8DD529-C774-4352-8C28-1C7484FE3177.png" alt="Rental van exterior" loading="lazy"></button>
-<button class="rental-thumb" type="button" data-gallery-src="images/FAB52BFC-CDE9-444C-89F3-CAB4CBD5715F.png" data-gallery-alt="Available rental van interior"><img src="images/FAB52BFC-CDE9-444C-89F3-CAB4CBD5715F.png" alt="Rental van interior" loading="lazy"></button>
-</div></div></div></section>
+    .rental-offer-card {
+      position: relative;
+      border: 1px solid rgba(17, 24, 39, .08);
+      border-radius: 26px;
+      padding: 30px;
+      background: #fff;
+      box-shadow: 0 16px 45px rgba(17, 24, 39, .08);
+      overflow: hidden
+    }
 
-<section class="rental-section" id="available-rentals"><div class="container"><div class="rental-section-head"><div><span class="rental-eyebrow">Verfügbare Mietangebote</span><h2>Eine klare Auswahl.<br><em>Klare Preise.</em></h2></div><p>Unser aktuelles Mietangebot wird übersichtlich dargestellt, damit Sie vor Ihrer Anfrage genau sehen, was verfügbar ist.</p></div>
-<div class="rental-offer-grid">
-<article class="rental-card rental-card-main"><div class="rental-card-image"><img src="images/renta_car_car_1.webp" alt="Available VertexRent rental van"></div><div class="rental-card-info"><span class="rental-card-label">Aktuell verfügbar</span><h3>Mietfahrzeug</h3><p>Unser aktuelles Mietfahrzeug ist auf Anfrage verfügbar. Wir bestätigen Zeitraum, Verfügbarkeit und Endpreis persönlich vor der Zahlung.</p><div class="rental-spec-grid"><div class="rental-spec"><strong>Persönliche Bestätigung</strong><span>Verfügbarkeit wird vor Bestätigung geprüft</span></div><div class="rental-spec"><strong>Flexible Mietzeiträume</strong><span>Wählen Sie den gewünschten Zeitraum</span></div><div class="rental-spec"><strong>Direkte Anfrage</strong><span>Einfache Online-Mietanfrage</span></div><div class="rental-spec"><strong>Klare Preisangabe</strong><span>Endpreis wird zuerst bestätigt</span></div></div><ul class="rental-checks"><li>Separater Mietanfrageprozess</li><li>Keine Zahlung bei der Anfrage</li><li>Bestätigung per E-Mail</li></ul><a class="rental-btn rental-btn-primary" href="#rental-booking">Diese Miete anfragen <span>→</span></a></div></article>
-<aside class="rental-card trailer-card"><span class="rental-card-label">Anhängervermietung</span><h3>Hulco Fahrzeugtransportanhänger</h3><p>3.000 kg zulässiges Gesamtgewicht, ideal für Fahrzeugtransport und andere schwere Lasten.</p><div class="rental-price-panel"><div class="rental-price-row"><span>Pro Tag</span><strong>€60</strong></div><div class="rental-price-row"><span>Pro Woche</span><strong>€250</strong></div><div class="rental-price-row"><span>Längere Mietdauer</span><strong>Auf Anfrage</strong></div></div><a class="rental-btn rental-btn-secondary" href="#rental-booking">Anhänger anfragen <span>→</span></a></aside>
-</div></div></section>
+    .rental-offer-card-primary {
+      background: linear-gradient(145deg, #fff 0%, #f7f9fc 100%)
+    }
 
-<section class="rental-section alt"><div class="container"><div class="rental-section-head"><div><span class="rental-eyebrow">Hulco Anhänger</span><h2>Gebaut für <em>Fahrzeugtransport.</em></h2></div><p>Zuverlässige Ausstattung mit praktischen Lademöglichkeiten für Fahrzeugtransport und schwere Lasten.</p></div>
-<div class="trailer-wrap"><article class="trailer-info"><span class="rental-card-label" style="background:rgba(255,255,255,.1);color:#fff;border-color:rgba(255,255,255,.12)">3.000 kg Klasse</span><h3>Hulco Fahrzeugtransportanhänger</h3><p>Zuverlässiger und gut ausgestatteter Anhänger für Kunden, die eine praktische Lösung zum Transport von Fahrzeugen und anderen schweren Lasten benötigen.</p><div class="trailer-specs"><div class="trailer-spec"><strong>3.000 kg</strong><span>Zulässiges Gesamtgewicht</span></div><div class="trailer-spec"><strong>≈ 2.200 kg</strong><span>Nutzlast</span></div><div class="trailer-spec"><strong>2 Achsen</strong><span>Stabile Transportlösung</span></div><div class="trailer-spec"><strong>4,20 m</strong><span>Ladefläche</span></div></div></article>
-<article class="trailer-details"><h4>Ausstattung &amp; Preise</h4><ul><li>Elektrische Seilwinde</li><li>2 Aluminium-Auffahrrampen</li><li>Geeignet für Fahrzeugtransport</li><li>Auch für schwere Lasten geeignet</li></ul><div class="trailer-prices"><div class="trailer-price"><small>Pro Tag</small><strong>€60</strong></div><div class="trailer-price"><small>Pro Woche</small><strong>€250</strong></div><div class="trailer-price"><small>Längere Mietdauer</small><strong>Auf Anfrage</strong></div></div></article></div></div></section>
+    .trailer-offer-card {
+      background: linear-gradient(145deg, #111827 0%, #1f2937 100%);
+      color: #fff;
+      border-color: rgba(255, 255, 255, .08);
+      box-shadow: 0 18px 50px rgba(17, 24, 39, .20)
+    }
 
-<section class="rental-booking" id="rental-booking"><div class="container rental-booking-shell"><div class="rental-booking-copy"><span class="rental-eyebrow">Mietanfrage</span><h2>Mietanfrage stellen.<br><em>Wir kümmern uns um den Rest.</em></h2><p>Wählen Sie Fahrzeug oder Anhänger, geben Sie Ihren gewünschten Zeitraum ein und senden Sie Ihre Anfrage. Wir prüfen die Verfügbarkeit und bestätigen den Preis vor einer Zahlung.</p><div class="rental-note"><strong>Bestätigung zuerst</strong><span>Ihre Anfrage ist keine Zahlung. Wir bestätigen Verfügbarkeit und Endpreis persönlich.</span></div><div class="rental-note"><strong>Klare Kommunikation</strong><span>Nach Prüfung der Anfrage erhält der Kunde eine Bestätigung per E-Mail.</span></div></div>
-<div class="rental-form-card"><h3 class="rental-form-title">Mietanfrage</h3><form class="service-contact-form" data-service-form="rental" data-service-name="Autovermietung" enctype="multipart/form-data" novalidate><input name="service" type="hidden" value="Autovermietung"><div class="form-section-heading"><span>01</span><h4>Ihre Kontaktdaten</h4></div><div class="form-row"><div class="form-group"><label for="rental-name">Vor- und Nachname <span class="required-mark">*</span></label><input autocomplete="name" id="rental-name" name="name" placeholder="Ihr vollständiger Name" required type="text"></div><div class="form-group"><label for="rental-email">E-Mail <span class="required-mark">*</span></label><input autocomplete="email" id="rental-email" name="email" placeholder="you@example.com" required type="email"></div></div><div class="form-row"><div class="form-group"><label for="rental-phone">Telefon <span class="required-mark">*</span></label><input autocomplete="tel" id="rental-phone" name="phone" placeholder="+49 ..." required type="tel"></div><div class="form-group"><label for="rental-vehicle">Was möchten Sie mieten? <span class="required-mark">*</span></label><select id="rental-vehicle" name="vehicle" required><option value="">Mietangebot auswählen</option><option value="Verfügbares Mietfahrzeug">Verfügbares Mietfahrzeug</option><option value="Hulco Fahrzeugtransportanhänger – 3.000 kg">Hulco Fahrzeugtransportanhänger – 3.000 kg</option></select></div></div><div class="form-section-heading"><span>02</span><h4>Mietzeitraum</h4></div><div class="form-row form-row-3"><div class="form-group"><label for="rental-date-from">Mietbeginn <span class="required-mark">*</span></label><input id="rental-date-from" name="dateFrom" required type="date"></div><div class="form-group"><label for="rental-date-to">Mietende <span class="required-mark">*</span></label><input id="rental-date-to" name="dateTo" required type="date"></div><div class="form-group"><label for="rental-duration">Mietdauer</label><input aria-describedby="rental-duration-help" id="rental-duration" name="duration" readonly type="text" value="—"><small class="field-help" id="rental-duration-help">Wird automatisch aus Ihren Mietdaten berechnet.</small></div></div><div class="form-section-heading"><span>03</span><h4>Zusätzliche Nachricht</h4></div><div class="form-group"><label for="rental-message">Nachricht</label><textarea id="rental-message" name="message" placeholder="Teilen Sie uns mit, was wir über Ihre Mietanfrage wissen sollten." rows="5"></textarea></div><div class="form-submit-row"><button class="btn btn-dark service-form-submit" type="submit">Mietanfrage senden <span>→</span></button><p aria-live="polite" class="service-form-status" role="status"></p></div><p class="form-note-inline">Mit dieser Anfrage wird keine Zahlung ausgelöst. Verfügbarkeit und Preis werden vor der Zahlung bestätigt.</p></form></div></div></section>
-</main>
-<div class="rental-lightbox" id="rentalLightbox" aria-hidden="true"><div class="rental-lightbox-inner"><button class="rental-lightbox-close" id="rentalLightboxClose" type="button" aria-label="Bild schließen">×</button><img id="rentalLightboxImage" src="" alt=""><div class="rental-lightbox-caption" id="rentalLightboxCaption"></div></div></div>
-<script>
-(function(){const main=document.getElementById('rentalGalleryMain'),thumbs=document.querySelectorAll('.rental-thumb'),expand=document.querySelector('.rental-gallery-expand'),lb=document.getElementById('rentalLightbox'),lbi=document.getElementById('rentalLightboxImage'),lbc=document.getElementById('rentalLightboxCaption'),close=document.getElementById('rentalLightboxClose');if(!main)return;thumbs.forEach(b=>b.addEventListener('click',()=>{main.src=b.dataset.gallerySrc;main.alt=b.dataset.galleryAlt||'Bild des Mietfahrzeugs';thumbs.forEach(t=>t.classList.remove('is-active'));b.classList.add('is-active')}));const open=()=>{lbi.src=main.src;lbi.alt=main.alt;lbc.textContent=main.alt||'';lb.classList.add('is-open');lb.setAttribute('aria-hidden','false');document.body.style.overflow='hidden'};const shut=()=>{lb.classList.remove('is-open');lb.setAttribute('aria-hidden','true');document.body.style.overflow=''};expand&&expand.addEventListener('click',open);close&&close.addEventListener('click',shut);lb.addEventListener('click',e=>{if(e.target===lb)shut()});document.addEventListener('keydown',e=>{if(e.key==='Escape')shut()})})();
-</script>
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <a class="logo footer-logo" href="index.html" aria-label="VertexRent Startseite">
-          <span class="logo-mark">V</span>
-          <span class="logo-text">VERTEX<span>RENT</span></span>
-        </a>
-        <p>Zuverlässige Mobilität.<br>Einfacher Service.<br>Ihre Fahrt beginnt hier.</p>
-        <div class="service-label-strip footer-services" aria-label="Unsere Leistungen">
-          <span>Abschleppdienst</span>
-          <span>AutoVermietung</span>
-          <span>Umzug</span>
-        </div>
-      </div>
-      <div class="footer-column">
-        <h4>Navigation</h4>
+    .rental-offer-topline {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px
+    }
+
+    .rental-offer-tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 32px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: #eef2f7;
+      color: #111827;
+      font-size: .76rem;
+      font-weight: 700;
+      letter-spacing: .04em;
+      text-transform: uppercase
+    }
+
+    .trailer-offer-card .rental-offer-tag {
+      background: rgba(255, 255, 255, .10);
+      color: #fff
+    }
+
+    .rental-offer-card h3 {
+      margin: 0 0 12px;
+      font-size: clamp(1.65rem, 2.3vw, 2.35rem);
+      line-height: 1.08;
+      letter-spacing: -.03em
+    }
+
+    .rental-offer-card h3 span {
+      display: block;
+      margin-top: 5px;
+      font-size: .62em;
+      font-weight: 600;
+      letter-spacing: 0;
+      opacity: .8
+    }
+
+    .rental-offer-card p {
+      margin: 0;
+      line-height: 1.7
+    }
+
+    .trailer-intro {
+      color: rgba(255, 255, 255, .82);
+      max-width: 54ch
+    }
+
+    .trailer-specs {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 24px
+    }
+
+    .trailer-specs>div {
+      padding: 14px 15px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, .07);
+      border: 1px solid rgba(255, 255, 255, .08)
+    }
+
+    .trailer-specs strong {
+      display: block;
+      font-size: 1.08rem;
+      line-height: 1.2
+    }
+
+    .trailer-specs span {
+      display: block;
+      margin-top: 5px;
+      color: rgba(255, 255, 255, .62);
+      font-size: .78rem;
+      line-height: 1.35
+    }
+
+    .trailer-feature-list {
+      display: grid;
+      gap: 10px;
+      margin-top: 22px
+    }
+
+    .trailer-feature-list div {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      color: rgba(255, 255, 255, .88);
+      font-size: .93rem
+    }
+
+    .trailer-feature-list span {
+      color: #fff;
+      font-weight: 800
+    }
+
+    .trailer-pricing {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 24px;
+      padding-top: 22px;
+      border-top: 1px solid rgba(255, 255, 255, .12)
+    }
+
+    .trailer-pricing small {
+      display: block;
+      margin-bottom: 5px;
+      color: rgba(255, 255, 255, .56);
+      font-size: .73rem;
+      text-transform: uppercase;
+      letter-spacing: .08em
+    }
+
+    .trailer-pricing strong {
+      display: block;
+      font-size: 1.1rem;
+      line-height: 1.25
+    }
+
+    .trailer-pricing strong span {
+      font-size: .75em;
+      font-weight: 500;
+      color: rgba(255, 255, 255, .58)
+    }
+
+    @media (max-width:900px) {
+      .rental-offers-grid {
+        grid-template-columns: 1fr
+      }
+    }
+
+    @media (max-width:640px) {
+      .rental-offer-card {
+        padding: 23px 20px;
+        border-radius: 20px
+      }
+
+      .trailer-specs {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .trailer-pricing {
+        grid-template-columns: 1fr
+      }
+
+      .rental-offer-topline {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px
+      }
+    }
+  </style>
+  <style>
+    :root {
+      --ri: #111827;
+      --rm: #667085;
+      --rl: #e7e9ee;
+      --rb: #f5f6f8;
+      --rc: #fff;
+      --rr: 26px;
+      --rs: 0 20px 60px rgba(17, 24, 39, .10)
+    }
+
+    .rental-page {
+      background: #fff;
+      color: var(--ri)
+    }
+
+    .rental-hero {
+      position: relative;
+      overflow: hidden;
+      padding: 108px 0 82px;
+      background: linear-gradient(135deg, #f8fafc, #e9edf2)
+    }
+
+    .rental-hero:after {
+      content: "";
+      position: absolute;
+      right: -170px;
+      bottom: -250px;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, .55)
+    }
+
+    .rental-hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(420px, .9fr);
+      gap: 54px;
+      align-items: center
+    }
+
+    .rental-kicker,
+    .rental-card-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 8px 12px;
+      border: 1px solid rgba(17, 24, 39, .08);
+      border-radius: 999px;
+      background: #fff;
+      font-size: .72rem;
+      font-weight: 900;
+      letter-spacing: .11em;
+      text-transform: uppercase
+    }
+
+    .rental-kicker:before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #111827
+    }
+
+    .rental-hero h1 {
+      margin: 20px 0 18px;
+      font-size: clamp(3rem, 5vw, 5.7rem);
+      line-height: .96;
+      letter-spacing: -.055em;
+      max-width: 10ch
+    }
+
+    .rental-hero h1 em,
+    .rental-section h2 em,
+    .rental-booking-copy h2 em {
+      font-style: normal;
+      color: #667085
+    }
+
+    .rental-hero-lead {
+      max-width: 58ch;
+      color: #596273;
+      font-size: 1.05rem;
+      line-height: 1.8
+    }
+
+    .rental-hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 28px
+    }
+
+    .rental-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 52px;
+      padding: 0 20px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 800;
+      transition: .2s ease
+    }
+
+    .rental-btn-primary {
+      background: #111827;
+      color: #fff;
+      box-shadow: 0 12px 24px rgba(17, 24, 39, .15)
+    }
+
+    .rental-btn-secondary {
+      background: #fff;
+      color: #111827;
+      border: 1px solid rgba(17, 24, 39, .10)
+    }
+
+    .rental-btn:hover {
+      transform: translateY(-2px)
+    }
+
+    .rental-hero-meta {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+      color: #6b7280;
+      font-size: .85rem
+    }
+
+    .rental-hero-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px
+    }
+
+    .rental-hero-meta span:before {
+      content: "✓";
+      display: grid;
+      place-items: center;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #111827;
+      color: #fff;
+      font-size: .68rem;
+      font-weight: 900
+    }
+
+    .rental-gallery {
+      background: #fff;
+      border: 1px solid rgba(17, 24, 39, .07);
+      padding: 14px;
+      border-radius: 30px;
+      box-shadow: var(--rs)
+    }
+
+    .rental-gallery-main {
+      position: relative;
+      aspect-ratio: 1.03/1;
+      overflow: hidden;
+      border-radius: 22px;
+      background: #e9edf0
+    }
+
+    .rental-gallery-main img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover
+    }
+
+    .rental-gallery-badge {
+      position: absolute;
+      left: 16px;
+      top: 16px;
+      padding: 8px 11px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, .95);
+      font-size: .68rem;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase
+    }
+
+    .rental-gallery-expand {
+      position: absolute;
+      right: 16px;
+      top: 16px;
+      width: 42px;
+      height: 42px;
+      border: 0;
+      border-radius: 50%;
+      background: rgba(17, 24, 39, .85);
+      color: #fff;
+      cursor: pointer
+    }
+
+    .rental-gallery-thumbs {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 9px;
+      margin-top: 9px
+    }
+
+    .rental-thumb {
+      padding: 0;
+      border: 0;
+      border-radius: 16px;
+      overflow: hidden;
+      aspect-ratio: 1.2/1;
+      background: #eef1f4;
+      cursor: pointer
+    }
+
+    .rental-thumb img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover
+    }
+
+    .rental-thumb.is-active {
+      outline: 3px solid #111827;
+      outline-offset: 2px
+    }
+
+    .rental-section {
+      padding: 94px 0
+    }
+
+    .rental-section.alt {
+      background: var(--rb)
+    }
+
+    .rental-section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 32px;
+      margin-bottom: 36px
+    }
+
+    .rental-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: .72rem;
+      font-weight: 900;
+      letter-spacing: .11em;
+      text-transform: uppercase;
+      color: #5d6674
+    }
+
+    .rental-eyebrow:before {
+      content: "";
+      width: 24px;
+      height: 1px;
+      background: #111827
+    }
+
+    .rental-section h2 {
+      margin: 11px 0 0;
+      font-size: clamp(2.1rem, 4vw, 3.8rem);
+      line-height: 1.02;
+      letter-spacing: -.045em
+    }
+
+    .rental-section-head p {
+      max-width: 460px;
+      margin: 0;
+      color: #697385;
+      line-height: 1.75
+    }
+
+    .rental-offer-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(330px, .7fr);
+      gap: 22px
+    }
+
+    .rental-card {
+      border: 1px solid var(--rl);
+      border-radius: var(--rr);
+      background: #fff;
+      overflow: hidden;
+      box-shadow: 0 16px 42px rgba(17, 24, 39, .06)
+    }
+
+    .rental-card-main {
+      display: grid;
+      grid-template-columns: minmax(310px, 1.05fr) minmax(0, .95fr);
+      min-height: 520px
+    }
+
+    .rental-card-image {
+      background: #e8ecef
+    }
+
+    .rental-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block
+    }
+
+    .rental-card-info {
+      padding: 36px
+    }
+
+    .rental-card-info h3 {
+      margin: 18px 0 10px;
+      font-size: clamp(2rem, 3vw, 3rem);
+      line-height: 1;
+      letter-spacing: -.04em
+    }
+
+    .rental-card-info p {
+      margin: 0;
+      color: #687385;
+      line-height: 1.75
+    }
+
+    .rental-spec-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 11px;
+      margin: 26px 0
+    }
+
+    .rental-spec {
+      padding: 15px 16px;
+      background: #fafbfc;
+      border: 1px solid var(--rl);
+      border-radius: 15px
+    }
+
+    .rental-spec strong {
+      display: block;
+      font-size: .82rem
+    }
+
+    .rental-spec span {
+      display: block;
+      margin-top: 4px;
+      color: #7d8692;
+      font-size: .76rem
+    }
+
+    .rental-checks {
+      display: grid;
+      gap: 10px;
+      padding: 0;
+      margin: 0 0 26px;
+      list-style: none
+    }
+
+    .rental-checks li {
+      display: flex;
+      gap: 9px;
+      color: #4b5563;
+      font-size: .91rem
+    }
+
+    .rental-checks li:before {
+      content: "✓";
+      display: grid;
+      place-items: center;
+      flex: 0 0 22px;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: #111827;
+      color: #fff;
+      font-size: .66rem;
+      font-weight: 900
+    }
+
+    .trailer-card {
+      padding: 32px;
+      background: #111827;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden
+    }
+
+    .trailer-card:after {
+      content: "";
+      position: absolute;
+      right: -90px;
+      top: -90px;
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, .08)
+    }
+
+    .trailer-card>* {
+      position: relative;
+      z-index: 1
+    }
+
+    .trailer-card .rental-card-label {
+      background: rgba(255, 255, 255, .1);
+      color: #fff;
+      border-color: rgba(255, 255, 255, .12)
+    }
+
+    .trailer-card h3 {
+      margin: 18px 0 12px;
+      font-size: 2rem;
+      letter-spacing: -.04em
+    }
+
+    .trailer-card p {
+      margin: 0;
+      color: rgba(255, 255, 255, .70);
+      line-height: 1.7
+    }
+
+    .rental-price-panel {
+      margin-top: 26px;
+      padding-top: 22px;
+      border-top: 1px solid rgba(255, 255, 255, .13)
+    }
+
+    .rental-price-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, .08)
+    }
+
+    .rental-price-row:last-child {
+      border-bottom: 0
+    }
+
+    .rental-price-row span {
+      color: rgba(255, 255, 255, .6);
+      font-size: .86rem
+    }
+
+    .rental-price-row strong {
+      font-size: 1.22rem
+    }
+
+    .trailer-card .rental-btn-secondary {
+      margin-top: auto;
+      background: #fff;
+      border-color: #fff
+    }
+
+    .trailer-wrap {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(320px, .95fr);
+      gap: 22px
+    }
+
+    .trailer-info {
+      padding: 38px;
+      background: #111827;
+      color: #fff;
+      border-radius: var(--rr);
+      box-shadow: var(--rs)
+    }
+
+    .trailer-info h3 {
+      margin: 15px 0 12px;
+      font-size: clamp(2rem, 3vw, 3.1rem);
+      letter-spacing: -.045em
+    }
+
+    .trailer-info p {
+      max-width: 56ch;
+      color: rgba(255, 255, 255, .70);
+      line-height: 1.75
+    }
+
+    .trailer-specs {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 11px;
+      margin-top: 26px
+    }
+
+    .trailer-spec {
+      padding: 15px;
+      border: 1px solid rgba(255, 255, 255, .12);
+      border-radius: 15px;
+      background: rgba(255, 255, 255, .05)
+    }
+
+    .trailer-spec strong {
+      display: block
+    }
+
+    .trailer-spec span {
+      display: block;
+      margin-top: 4px;
+      color: rgba(255, 255, 255, .56);
+      font-size: .76rem
+    }
+
+    .trailer-details {
+      padding: 32px;
+      border: 1px solid var(--rl);
+      border-radius: var(--rr);
+      background: #fff;
+      box-shadow: 0 16px 42px rgba(17, 24, 39, .06)
+    }
+
+    .trailer-details h4 {
+      margin: 0 0 18px;
+      font-size: 1.35rem
+    }
+
+    .trailer-details ul {
+      display: grid;
+      gap: 12px;
+      padding: 0;
+      margin: 0;
+      list-style: none
+    }
+
+    .trailer-details li {
+      display: flex;
+      gap: 9px;
+      color: #4b5563
+    }
+
+    .trailer-details li:before {
+      content: "✓";
+      color: #111827;
+      font-weight: 900
+    }
+
+    .trailer-prices {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 26px
+    }
+
+    .trailer-price {
+      padding: 15px;
+      border-radius: 15px;
+      background: #f5f7f9
+    }
+
+    .trailer-price small {
+      display: block;
+      color: #7a8390;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-size: .64rem;
+      font-weight: 800
+    }
+
+    .trailer-price strong {
+      display: block;
+      margin-top: 5px;
+      font-size: 1.15rem
+    }
+
+    .rental-booking {
+      padding: 98px 0;
+      background: #f5f6f8
+    }
+
+    .rental-booking-shell {
+      display: grid;
+      grid-template-columns: minmax(280px, .72fr) minmax(0, 1.28fr);
+      gap: 34px;
+      align-items: start
+    }
+
+    .rental-booking-copy {
+      position: sticky;
+      top: 100px
+    }
+
+    .rental-booking-copy h2 {
+      margin: 11px 0 14px;
+      font-size: clamp(2.15rem, 4vw, 3.7rem);
+      line-height: 1;
+      letter-spacing: -.045em
+    }
+
+    .rental-booking-copy p {
+      color: #687385;
+      line-height: 1.75
+    }
+
+    .rental-note {
+      display: grid;
+      gap: 6px;
+      margin-top: 20px;
+      padding: 16px 17px;
+      background: #fff;
+      border: 1px solid var(--rl);
+      border-radius: 17px
+    }
+
+    .rental-note strong {
+      font-size: .9rem
+    }
+
+    .rental-note span {
+      font-size: .78rem;
+      color: #7b8490;
+      line-height: 1.45
+    }
+
+    .rental-form-card {
+      padding: 34px;
+      background: #fff;
+      border: 1px solid var(--rl);
+      border-radius: var(--rr);
+      box-shadow: 0 16px 42px rgba(17, 24, 39, .07)
+    }
+
+    .rental-form-title {
+      margin: 0 0 24px;
+      font-size: 1.45rem
+    }
+
+    .rental-lightbox {
+      position: fixed;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      background: rgba(7, 12, 18, .88);
+      z-index: 9999;
+      padding: 24px
+    }
+
+    .rental-lightbox.is-open {
+      display: flex
+    }
+
+    .rental-lightbox-inner {
+      width: 100%;
+      max-width: 1100px;
+      position: relative
+    }
+
+    .rental-lightbox img {
+      width: 100%;
+      max-height: 82vh;
+      object-fit: contain;
+      display: block;
+      border-radius: 18px
+    }
+
+    .rental-lightbox-close {
+      position: absolute;
+      right: -8px;
+      top: -48px;
+      width: 38px;
+      height: 38px;
+      border: 0;
+      border-radius: 50%;
+      background: #fff;
+      color: #111;
+      cursor: pointer;
+      font-size: 1.2rem
+    }
+
+    .rental-lightbox-caption {
+      margin-top: 10px;
+      text-align: center;
+      color: rgba(255, 255, 255, .72);
+      font-size: .82rem
+    }
+
+    @media(max-width:980px) {
+
+      .rental-hero-grid,
+      .rental-offer-grid,
+      .trailer-wrap,
+      .rental-booking-shell {
+        grid-template-columns: 1fr
+      }
+
+      .rental-booking-copy {
+        position: static
+      }
+
+      .rental-card-main {
+        grid-template-columns: 1fr
+      }
+
+      .rental-card-image {
+        min-height: 360px
+      }
+
+      .rental-section-head {
+        align-items: flex-start;
+        flex-direction: column
+      }
+    }
+
+    @media(max-width:680px) {
+      .rental-hero {
+        padding: 70px 0 50px
+      }
+
+      .rental-hero-grid {
+        gap: 28px
+      }
+
+      .rental-hero-actions {
+        flex-direction: column
+      }
+
+      .rental-btn {
+        width: 100%
+      }
+
+      .rental-section,
+      .rental-booking {
+        padding: 70px 0
+      }
+
+      .rental-gallery {
+        padding: 9px;
+        border-radius: 24px
+      }
+
+      .rental-gallery-main {
+        border-radius: 18px
+      }
+
+      .rental-gallery-thumbs {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .rental-thumb:last-child {
+        display: none
+      }
+
+      .rental-card-info,
+      .trailer-card,
+      .trailer-info,
+      .trailer-details,
+      .rental-form-card {
+        padding: 24px
+      }
+
+      .rental-card-image {
+        min-height: 280px
+      }
+
+      .rental-spec-grid,
+      .trailer-specs {
+        grid-template-columns: 1fr
+      }
+
+      .trailer-prices {
+        grid-template-columns: 1fr
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="logo" aria-label="VertexRent Startseite">
+        <span class="logo-mark">V</span>
+        <span class="logo-text">VERTEX<span>RENT</span></span>
+      </a>
+      <nav id="site-navigation" class="main-nav" aria-label="Hauptnavigation">
         <a href="index.html">Startseite</a>
         <a href="services.html">Leistungen</a>
         <a href="rental.html">Autovermietung</a>
         <a href="moving.html">Umzug</a>
+        <a href="index.html#fleet">Fahrzeuge</a>
         <a href="index.html#about">Über uns</a>
         <a href="index.html#contact">Kontakt</a>
-      </div>
-      <div class="footer-column">
-        <h4>Leistungen</h4>
-        <a href="rental.html">Fahrzeugvermietung</a>
-        <a href="services.html#transport">Abschleppdienst / Fahrzeugtransport</a>
-        <a href="moving.html">Haushaltsumzüge</a>
-      </div>
-      <div class="footer-column">
-        <h4>Kontakt</h4>
-        <a href="mailto:info@vertexrent.de">info@vertexrent.de</a>
-        <span class="footer-muted">Deutschland</span>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2026 Alle Rechte vorbehalten.</p>
-      <nav aria-label="Rechtliche Hinweise" class="legal-links">
-        <a href="impressum.html">Impressum</a>
-        <a href="agb.html">AGB</a>
-        <a href="datenschutz.html">Datenschutz</a>
-        <a href="privacy-policy.html">Datenschutzrichtlinie</a>
-        <a href="cookies.html">Cookies</a>
       </nav>
+      <a href="rental.html" class="nav-cta">Fahrzeug anfragen</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation"
+        aria-label="Navigationsmenü öffnen">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <main class="rental-page">
+    <section class="rental-hero">
+      <div class="container rental-hero-grid">
+        <div class="rental-hero-copy"><span class="rental-kicker">Autovermietung Vertex</span>
+          <h1> Mieten Sie, was Sie brauchen.<br><em>Fahren Sie mit Vertrauen.</em></h1>
+          <p class="rental-hero-lead">
+            Ein klarer und persönlicher Mietservice für unsere verfügbaren Fahrzeuge
+            und den Hulco-Autotransportanhänger. Sehen Sie sich die Ausstattung an,
+            vergleichen Sie die Preise und senden Sie Ihre Anfrage direkt an VertexRent.
+          </p>
+          <div class="rental-hero-actions"><a class="rental-btn rental-btn-primary" href="#rental-booking">Verfügbarkeit
+              anfragen <span>→</span></a><a class="rental-btn rental-btn-secondary"
+              href="#available-rentals">Mietfahrzeuge ansehen</a></div>
+          <div class="rental-hero-meta"><span>Verfügbarkeit wird persönlich bestätigt</span><span>Keine Zahlung vor
+              Bestätigung</span></div>
+        </div>
+        <div class="rental-gallery" aria-label="Verfügbares Mietfahrzeug gallery">
+          <div class="rental-gallery-main"><img id="rentalGalleryMain"
+              src="images/BC8DD529-C774-4352-8C28-1C7484FE3177.png" alt="Available VertexRent rental van"
+              loading="eager"><span class="rental-gallery-badge">Verfügbares Mietfahrzeug</span><button
+              class="rental-gallery-expand" type="button" aria-label="Open rental vehicle image">↗</button></div>
+          <div class="rental-gallery-thumbs">
+            <button class="rental-thumb is-active" type="button"
+              data-gallery-src="images/BC8DD529-C774-4352-8C28-1C7484FE3177.png"
+              data-gallery-alt="Available rental van exterior"><img
+                src="images/BC8DD529-C774-4352-8C28-1C7484FE3177.png" alt="Rental van exterior" loading="lazy"></button>
+            <button class="rental-thumb" type="button"
+              data-gallery-src="images/FAB52BFC-CDE9-444C-89F3-CAB4CBD5715F.png"
+              data-gallery-alt="Available rental van interior"><img
+                src="images/FAB52BFC-CDE9-444C-89F3-CAB4CBD5715F.png" alt="Rental van interior" loading="lazy"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="rental-section" id="available-rentals">
+      <div class="container">
+        <div class="rental-section-head">
+          <div><span class="rental-eyebrow">Verfügbare Mietangebote</span>
+            <h2>Eine klare Auswahl.<br><em>Klare Preise.</em></h2>
+          </div>
+          <p>Unser aktuelles Mietangebot wird übersichtlich dargestellt, damit Sie vor Ihrer Anfrage genau sehen, was
+            verfügbar ist.</p>
+        </div>
+        <div class="rental-offer-grid">
+          <article class="rental-card rental-card-main">
+            <div class="rental-card-image"><img src="images/renta_car_car_1.webp" alt="Available VertexRent rental van">
+            </div>
+            <div class="rental-card-info"><span class="rental-card-label">Aktuell verfügbar</span>
+              <h3>Mietfahrzeug</h3>
+              <p>Unser aktuelles Mietfahrzeug ist auf Anfrage verfügbar. Wir bestätigen Zeitraum, Verfügbarkeit und
+                Endpreis persönlich vor der Zahlung.</p>
+              <div class="rental-spec-grid">
+                <div class="rental-spec"><strong>Persönliche Bestätigung</strong><span>Verfügbarkeit wird vor
+                    Bestätigung geprüft</span></div>
+                <div class="rental-spec"><strong>Flexible Mietzeiträume</strong><span>Wählen Sie den gewünschten
+                    Zeitraum</span></div>
+                <div class="rental-spec"><strong>Direkte Anfrage</strong><span>Einfache Online-Mietanfrage</span></div>
+                <div class="rental-spec"><strong>Klare Preisangabe</strong><span>Endpreis wird zuerst bestätigt</span>
+                </div>
+              </div>
+              <ul class="rental-checks">
+                <li>Separater Mietanfrageprozess</li>
+                <li>Keine Zahlung bei der Anfrage</li>
+                <li>Bestätigung per E-Mail</li>
+              </ul><a class="rental-btn rental-btn-primary" href="#rental-booking">Diese Miete anfragen
+                <span>→</span></a>
+            </div>
+          </article>
+          <aside class="rental-card trailer-card"><span class="rental-card-label">Anhängervermietung</span>
+            <h3>Hulco Fahrzeugtransportanhänger</h3>
+            <p>3.000 kg zulässiges Gesamtgewicht, ideal für Fahrzeugtransport und andere schwere Lasten.</p>
+            <div class="rental-price-panel">
+              <div class="rental-price-row"><span>Pro Tag</span><strong>€60</strong></div>
+              <div class="rental-price-row"><span>Pro Woche</span><strong>€250</strong></div>
+              <div class="rental-price-row"><span>Längere Mietdauer</span><strong>Auf Anfrage</strong></div>
+            </div><a class="rental-btn rental-btn-secondary" href="#rental-booking">Anhänger anfragen <span>→</span></a>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="rental-section alt">
+      <div class="container">
+        <div class="rental-section-head">
+          <div><span class="rental-eyebrow">Hulco Anhänger</span>
+            <h2>Gebaut für <em>Fahrzeugtransport.</em></h2>
+          </div>
+          <p>Zuverlässige Ausstattung mit praktischen Lademöglichkeiten für Fahrzeugtransport und schwere Lasten.</p>
+        </div>
+        <div class="trailer-wrap">
+          <article class="trailer-info"><span class="rental-card-label"
+              style="background:rgba(255,255,255,.1);color:#fff;border-color:rgba(255,255,255,.12)">3.000 kg
+              Klasse</span>
+            <h3>Hulco Fahrzeugtransportanhänger</h3>
+            <p>Zuverlässiger und gut ausgestatteter Anhänger für Kunden, die eine praktische Lösung zum Transport von
+              Fahrzeugen und anderen schweren Lasten benötigen.</p>
+            <div class="trailer-specs">
+              <div class="trailer-spec"><strong>3.000 kg</strong><span>Zulässiges Gesamtgewicht</span></div>
+              <div class="trailer-spec"><strong>≈ 2.200 kg</strong><span>Nutzlast</span></div>
+              <div class="trailer-spec"><strong>2 Achsen</strong><span>Stabile Transportlösung</span></div>
+              <div class="trailer-spec"><strong>4,20 m</strong><span>Ladefläche</span></div>
+            </div>
+          </article>
+          <article class="trailer-details">
+            <h4>Ausstattung &amp; Preise</h4>
+            <ul>
+              <li>Elektrische Seilwinde</li>
+              <li>2 Aluminium-Auffahrrampen</li>
+              <li>Geeignet für Fahrzeugtransport</li>
+              <li>Auch für schwere Lasten geeignet</li>
+            </ul>
+            <div class="trailer-prices">
+              <div class="trailer-price"><small>Pro Tag</small><strong>€60</strong></div>
+              <div class="trailer-price"><small>Pro Woche</small><strong>€250</strong></div>
+              <div class="trailer-price"><small>Längere Mietdauer</small><strong>Auf Anfrage</strong></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="rental-booking" id="rental-booking">
+      <div class="container rental-booking-shell">
+        <div class="rental-booking-copy"><span class="rental-eyebrow">Mietanfrage</span>
+          <h2>Mietanfrage stellen.<br><em>Wir kümmern uns um den Rest.</em></h2>
+          <p>Wählen Sie Fahrzeug oder Anhänger, geben Sie Ihren gewünschten Zeitraum ein und senden Sie Ihre Anfrage.
+            Wir prüfen die Verfügbarkeit und bestätigen den Preis vor einer Zahlung.</p>
+          <div class="rental-note"><strong>Bestätigung zuerst</strong><span>Ihre Anfrage ist keine Zahlung. Wir
+              bestätigen Verfügbarkeit und Endpreis persönlich.</span></div>
+          <div class="rental-note"><strong>Klare Kommunikation</strong><span>Nach Prüfung der Anfrage erhält der Kunde
+              eine Bestätigung per E-Mail.</span></div>
+        </div>
+        <div class="rental-form-card">
+          <h3 class="rental-form-title">Mietanfrage</h3>
+          <form class="service-contact-form" data-service-form="rental" data-service-name="Autovermietung"
+            enctype="multipart/form-data" novalidate><input name="service" type="hidden" value="Autovermietung">
+            <div class="form-section-heading"><span>01</span>
+              <h4>Ihre Kontaktdaten</h4>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label for="rental-name">Vor- und Nachname <span
+                    class="required-mark">*</span></label><input autocomplete="name" id="rental-name" name="name"
+                  placeholder="Ihr vollständiger Name" required type="text"></div>
+              <div class="form-group"><label for="rental-email">E-Mail <span
+                    class="required-mark">*</span></label><input autocomplete="email" id="rental-email" name="email"
+                  placeholder="you@example.com" required type="email"></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label for="rental-phone">Telefon <span
+                    class="required-mark">*</span></label><input autocomplete="tel" id="rental-phone" name="phone"
+                  placeholder="+49 ..." required type="tel"></div>
+              <div class="form-group"><label for="rental-vehicle">Was möchten Sie mieten? <span
+                    class="required-mark">*</span></label><select id="rental-vehicle" name="vehicle" required>
+                  <option value="">Mietangebot auswählen</option>
+                  <option value="Verfügbares Mietfahrzeug">Verfügbares Mietfahrzeug</option>
+                  <option value="Hulco Fahrzeugtransportanhänger – 3.000 kg">Hulco Fahrzeugtransportanhänger – 3.000 kg
+                  </option>
+                </select></div>
+            </div>
+            <div class="form-section-heading"><span>02</span>
+              <h4>Mietzeitraum</h4>
+            </div>
+            <div class="form-row form-row-3">
+              <div class="form-group"><label for="rental-date-from">Mietbeginn <span
+                    class="required-mark">*</span></label><input id="rental-date-from" name="dateFrom" required
+                  type="date"></div>
+              <div class="form-group"><label for="rental-date-to">Mietende <span
+                    class="required-mark">*</span></label><input id="rental-date-to" name="dateTo" required type="date">
+              </div>
+              <div class="form-group"><label for="rental-duration">Mietdauer</label><input
+                  aria-describedby="rental-duration-help" id="rental-duration" name="duration" readonly type="text"
+                  value="—"><small class="field-help" id="rental-duration-help">Wird automatisch aus Ihren Mietdaten
+                  berechnet.</small></div>
+            </div>
+            <div class="form-section-heading"><span>03</span>
+              <h4>Zusätzliche Nachricht</h4>
+            </div>
+            <div class="form-group"><label for="rental-message">Nachricht</label><textarea id="rental-message"
+                name="message" placeholder="Teilen Sie uns mit, was wir über Ihre Mietanfrage wissen sollten."
+                rows="5"></textarea></div>
+            <div class="form-submit-row"><button class="btn btn-dark service-form-submit" type="submit">Mietanfrage
+                senden <span>→</span></button>
+              <p aria-live="polite" class="service-form-status" role="status"></p>
+            </div>
+            <p class="form-note-inline">Mit dieser Anfrage wird keine Zahlung ausgelöst. Verfügbarkeit und Preis werden
+              vor der Zahlung bestätigt.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div class="rental-lightbox" id="rentalLightbox" aria-hidden="true">
+    <div class="rental-lightbox-inner"><button class="rental-lightbox-close" id="rentalLightboxClose" type="button"
+        aria-label="Bild schließen">×</button><img id="rentalLightboxImage" src="" alt="">
+      <div class="rental-lightbox-caption" id="rentalLightboxCaption"></div>
     </div>
   </div>
-</footer>
-<div class="cookie-notice" id="cookieNotice" role="region" aria-label="Cookie-Hinweis" hidden>
-  <div class="cookie-notice-inner">
-    <div>
-      <p class="cookie-notice-title">Datenschutz &amp; Cookies</p>
-      <p class="cookie-notice-text">Diese Website verwendet derzeit nur technisch erforderliche Speichermechanismen für grundlegende Funktionen und Ihre Cookie-Einstellungen. Analyse- oder Marketing-Cookies sind standardmäßig nicht aktiviert. <a href="privacy-policy.html">Mehr erfahren</a></p>
+  <script>
+    (function () { const main = document.getElementById('rentalGalleryMain'), thumbs = document.querySelectorAll('.rental-thumb'), expand = document.querySelector('.rental-gallery-expand'), lb = document.getElementById('rentalLightbox'), lbi = document.getElementById('rentalLightboxImage'), lbc = document.getElementById('rentalLightboxCaption'), close = document.getElementById('rentalLightboxClose'); if (!main) return; thumbs.forEach(b => b.addEventListener('click', () => { main.src = b.dataset.gallerySrc; main.alt = b.dataset.galleryAlt || 'Bild des Mietfahrzeugs'; thumbs.forEach(t => t.classList.remove('is-active')); b.classList.add('is-active') })); const open = () => { lbi.src = main.src; lbi.alt = main.alt; lbc.textContent = main.alt || ''; lb.classList.add('is-open'); lb.setAttribute('aria-hidden', 'false'); document.body.style.overflow = 'hidden' }; const shut = () => { lb.classList.remove('is-open'); lb.setAttribute('aria-hidden', 'true'); document.body.style.overflow = '' }; expand && expand.addEventListener('click', open); close && close.addEventListener('click', shut); lb.addEventListener('click', e => { if (e.target === lb) shut() }); document.addEventListener('keydown', e => { if (e.key === 'Escape') shut() }) })();
+  </script>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="logo footer-logo" href="index.html" aria-label="VertexRent Startseite">
+            <span class="logo-mark">V</span>
+            <span class="logo-text">VERTEX<span>RENT</span></span>
+          </a>
+          <p>Zuverlässige Mobilität.<br>Einfacher Service.<br>Ihre Fahrt beginnt hier.</p>
+          <div class="service-label-strip footer-services" aria-label="Unsere Leistungen">
+            <span>Abschleppdienst</span>
+            <span>AutoVermietung</span>
+            <span>Umzug</span>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Navigation</h4>
+          <a href="index.html">Startseite</a>
+          <a href="services.html">Leistungen</a>
+          <a href="rental.html">Autovermietung</a>
+          <a href="moving.html">Umzug</a>
+          <a href="index.html#about">Über uns</a>
+          <a href="index.html#contact">Kontakt</a>
+        </div>
+        <div class="footer-column">
+          <h4>Leistungen</h4>
+          <a href="rental.html">Fahrzeugvermietung</a>
+          <a href="services.html#transport">Abschleppdienst / Fahrzeugtransport</a>
+          <a href="moving.html">Haushaltsumzüge</a>
+        </div>
+        <div class="footer-column">
+          <h4>Kontakt</h4>
+          <a href="mailto:info@vertexrent.de">info@vertexrent.de</a>
+          <span class="footer-muted">Deutschland</span>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Alle Rechte vorbehalten.</p>
+        <nav aria-label="Rechtliche Hinweise" class="legal-links">
+          <a href="impressum.html">Impressum</a>
+          <a href="agb.html">AGB</a>
+          <a href="datenschutz.html">Datenschutz</a>
+          <a href="privacy-policy.html">Datenschutzrichtlinie</a>
+          <a href="cookies.html">Cookies</a>
+        </nav>
+      </div>
     </div>
-    <div class="cookie-notice-actions">
-      <button type="button" class="cookie-button" id="cookieNecessary">Weiter</button>
-      <a href="cookies.html" class="cookie-link">Cookie-Einstellungen</a>
+  </footer>
+  <div class="cookie-notice" id="cookieNotice" role="region" aria-label="Cookie-Hinweis" hidden>
+    <div class="cookie-notice-inner">
+      <div>
+        <p class="cookie-notice-title">Datenschutz &amp; Cookies</p>
+        <p class="cookie-notice-text">Diese Website verwendet derzeit nur technisch erforderliche Speichermechanismen
+          für grundlegende Funktionen und Ihre Cookie-Einstellungen. Analyse- oder Marketing-Cookies sind standardmäßig
+          nicht aktiviert. <a href="privacy-policy.html">Mehr erfahren</a></p>
+      </div>
+      <div class="cookie-notice-actions">
+        <button type="button" class="cookie-button" id="cookieNecessary">Weiter</button>
+        <a href="cookies.html" class="cookie-link">Cookie-Einstellungen</a>
+      </div>
     </div>
   </div>
-</div>
-<script src="script.js"></script> 
-</body></html>
+  <script src="script.js"></script>
+</body>
+
+</html>
